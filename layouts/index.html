@@ -168,23 +168,14 @@
     <div class="container px-4 mx-auto text-center">
         <h2 class="text-3xl font-extrabold">See Our Facilities</h2>
         <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
-
-        <div class="flex flex-nowrap">
-            <div class="mx-2">
-                <img src="/facilities/1.jpeg" alt="">
+        <div class="grid grid-flow-row grid-cols-3 grid-rows-2 gap-4">
+            {{ $images := resources.Match "images/facilities/*" }}
+            {{ range $i := $images }}
+            <div>
+                {{ $resized := $i.Resize "x800 webp" }}
+                <img src="{{ $resized.RelPermalink }}" alt="" class="rounded">
             </div>
-            <div class="mx-2">
-                <img src="/facilities/2.jpeg" alt="">
-            </div>
-            <div class="mx-2">
-                <img src="/facilities/3.jpeg" alt="">
-            </div>
-            <div class="mx-2">
-                <img src="/facilities/4.jpeg" alt="">
-            </div>
-            <div class="mx-2">
-                <img src="/facilities/5.jpeg" alt="">
-            </div>
+            {{ end }}
         </div>
     </div>
 </div>
