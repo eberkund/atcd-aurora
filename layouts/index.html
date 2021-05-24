@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="relative bg-white overflow-hidden">
+<div class="relative bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
             <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
@@ -65,11 +65,8 @@
                     </div>
                     <div class="px-2 pt-2 pb-3 space-y-1">
                         <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
-
                         <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
-
                         <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
-
                         <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
                     </div>
                     <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
@@ -151,7 +148,7 @@
             <h2 class="text-3xl font-extrabold" id="facilities">See Our Facilities</h2>
             <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
-        <div class="grid grid-flow-row grid-cols-3 gap-4">
+        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-4">
             {{ $images := resources.Match "images/facilities/*" }}
             {{ range $i := $images }}
             <div>
@@ -169,22 +166,22 @@
             <h2 class="text-3xl font-extrabold">Your Angelic Treasure Belongs Here</h2>
             <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
-        <div class="grid grid-flow-row grid-cols-3 gap-5">
+        <div class="grid grid-flow-row lg:grid-cols-3 gap-5">
             <div class="shadow-md rounded-md p-8 m-2">
                 {{ $image := resources.Get "images/icons/growth.png" }}
-                <img src="{{ $image.RelPermalink }} " alt="" class="mx-auto mb-4">
+                <img src="{{ $image.RelPermalink }} " class="mx-auto mb-4">
                 <h3 class="text-xl font-bold mb-3">Growth & Development</h3>
-                <p class="text-gray-500">Our programs are focused on supporting your child’s overall development. Your child will participate in a variety of age-appropriate activities that are educational, engaging, and most importantly—fun!</p>
+                <p class="text-gray-500">Our programs are focused on supporting your child’s overall development. Your child will participate in a variety of age-appropriate activities that are educational, engaging and most importantly&ndash;fun!</p>
             </div>
             <div class="shadow-md rounded-md p-8 m-2">
                 {{ $image := resources.Get "images/icons/academic.png" }}
-                <img src="{{ $image.RelPermalink }} " alt="" class="mx-auto mb-4">
+                <img src="{{ $image.RelPermalink }} " class="mx-auto mb-4">
                 <h3 class="text-xl font-bold mb-3">Academic Advancement</h3>
                 <p class="text-gray-500">It’s never too early to set your child up for future success. With our French offerings, well-rounded curriculum, and home-away-from-home learning environment, your child will have the tools they need to thrive.</p>
             </div>
             <div class="shadow-md rounded-md p-8 m-2">
                 {{ $image := resources.Get "images/icons/confidence.png" }}
-                <img src="{{ $image.RelPermalink }} " alt="" class="mx-auto mb-4">
+                <img src="{{ $image.RelPermalink }} " class="mx-auto mb-4">
                 <h3 class="text-xl font-bold mb-3">Confidence & Communication</h3>
                 <p class="text-gray-500">At daycare, children have the opportunity to socialize with both kids and adults. They’ll gain confidence, build their self-esteem, and gain interpersonal and communication skills for when they enter grade school.</p>
             </div>
@@ -199,7 +196,7 @@
             <h2 class="text-3xl font-extrabold">Our Programs</h2>
             <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
-        <div class="grid grid-flow-row grid-cols-3 gap-5">
+        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-5">
             {{ range $.Site.Data.programs }}
             {{ partial "program.html" . }}
             {{ end }}
@@ -207,7 +204,7 @@
     </div>
 </div>
 
-<div class="container mx-auto py-20">
+<div class="container px-4 mx-auto py-20">
     <div class="text-center">
         <h2 class="text-3xl font-extrabold" id="faq">FAQ</h2>
         <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
