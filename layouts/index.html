@@ -110,17 +110,23 @@
 
 
 <div class="py-20">
-    <div class="container px-4 mx-auto text-center">
-        <h2 class="text-3xl font-extrabold">Location</h2>
-        <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11480.51849266939!2d-79.4749458!3d43.9980462!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfb33b343189966e8!2sAngelic%20Treasures%20Christian%20Daycare%20Aurora!5e0!3m2!1sen!2sca!4v1620080499347!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="container px-4 mx-auto">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold">Location</h2>
+            <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
+        <div id="map" style="width: 100%; height: 400px;"></div>
+
+        {{ $scripts := resources.Get "scripts/map.ts" }}
+        {{ $options := dict "minify" true }}
+        {{ $js := $scripts | js.Build $options }}
+        <script src="{{ $js.RelPermalink }}"></script>
+
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        {{ $key := getenv "GOOGLE_MAPS_API_KEY" }}
+        <script src="https://maps.googleapis.com/maps/api/js?key={{ $key }}&callback=initMap&libraries=&v=weekly"></script>
     </div>
 </div>
-
-
-
 
 <div class="py-20">
     <div class="container px-4 mx-auto">
@@ -218,6 +224,5 @@
 <div class="calendly-inline-widget" data-url="https://calendly.com/directoraurora/30min-facility-tour?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:630px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
-
 
 {{ end }}
