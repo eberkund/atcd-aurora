@@ -49,9 +49,9 @@
             <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
                 <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div class="px-5 pt-4 flex items-center justify-between">
-                        {{ $webp := resources.Get "images/logo.jpg" }}
+                        {{ $logo := resources.Get "images/logo.jpg" }}
                         <div>
-                            <img class="h-8 w-auto" src="{{ $webp.RelPermalink }}" alt="">
+                            <img class="h-8 w-auto" src="{{ $logo.RelPermalink }}" alt="">
                         </div>
                         <div class="-mr-2">
                             <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -117,14 +117,14 @@
         </div>
         <div id="map" style="width: 100%; height: 400px;"></div>
 
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        {{ $key := getenv "GOOGLE_MAPS_API_KEY" }}
+        <script>window.GOOGLE_MAPS_API_KEY = '{{ $key }}'</script>
+
         {{ $scripts := resources.Get "scripts/map.ts" }}
         {{ $options := dict "minify" true }}
         {{ $js := $scripts | js.Build $options }}
         <script src="{{ $js.RelPermalink }}"></script>
-
-        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-        {{ $key := getenv "GOOGLE_MAPS_API_KEY" }}
-        <script src="https://maps.googleapis.com/maps/api/js?key={{ $key }}&callback=initMap&libraries=&v=weekly"></script>
     </div>
 </div>
 
