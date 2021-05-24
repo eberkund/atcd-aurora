@@ -165,15 +165,17 @@
 </div>
 
 <div class="bg-gradient py-20">
-    <div class="container px-4 mx-auto text-center">
-        <h2 class="text-3xl font-extrabold">See Our Facilities</h2>
-        <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
-        <div class="grid grid-flow-row grid-cols-3 grid-rows-2 gap-4">
+    <div class="container px-4 mx-auto">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold">See Our Facilities</h2>
+            <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+        </div>
+        <div class="grid grid-flow-row grid-cols-3 gap-4">
             {{ $images := resources.Match "images/facilities/*" }}
             {{ range $i := $images }}
             <div>
                 {{ $resized := $i.Resize "x800 webp" }}
-                <img src="{{ $resized.RelPermalink }}" alt="" class="rounded">
+                <img src="{{ $resized.RelPermalink }}" alt="" class="rounded-lg">
             </div>
             {{ end }}
         </div>
@@ -181,10 +183,29 @@
 </div>
 
 
-<h2 class="text-3xl font-extrabold">Our Programs</h2>
+<div class="bg-gradient py-20">
+    <div class="container px-4 mx-auto">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold">Our Programs</h2>
+            <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+        </div>
+        <div class="grid grid-flow-row grid-cols-3 grid-rows-2 gap-4">
+            {{ range $.Site.Data.programs }}
+            {{ partial "program.html" . }}
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+
 <h2 class="text-3xl font-extrabold" id="faq">FAQ</h2>
 
 {{ partial "form.html" . }}
+
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/directoraurora/30min-facility-tour?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
 
 
 {{ end }}
