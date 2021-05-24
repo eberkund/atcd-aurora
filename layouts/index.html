@@ -119,32 +119,7 @@
     </div>
 </div>
 
-<div class="py-20">
-    <div class="container px-4 mx-auto text-center">
-        <h2 class="text-3xl font-extrabold">Your Angelic Treasure Belongs Here</h2>
-        <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
-        <div class="flex flex-nowrap">
-            <div class="shadow-md rounded-md flex-1 p-8 m-2">
-                {{ $image := resources.Get "images/icons/growth.png" }}
-                <img src="{{ $image.RelPermalink }} " alt="" class="mx-auto mb-4">
-                <h3 class="text-xl font-bold mb-3">Growth & Development</h3>
-                <p class="text-gray-500">Our programs are focused on supporting your child’s overall development. Your child will participate in a variety of age-appropriate activities that are educational, engaging, and most importantly—fun!</p>
-            </div>
-            <div class="shadow-md rounded-md flex-1 p-8 m-2">
-                {{ $image := resources.Get "images/icons/academic.png" }}
-                <img src="{{ $image.RelPermalink }} " alt="" class="mx-auto mb-4">
-                <h3 class="text-xl font-bold mb-3">Academic Advancement</h3>
-                <p class="text-gray-500">It’s never too early to set your child up for future success. With our French offerings, well-rounded curriculum, and home-away-from-home learning environment, your child will have the tools they need to thrive.</p>
-            </div>
-            <div class="shadow-md rounded-md flex-1 p-8 m-2">
-                {{ $image := resources.Get "images/icons/confidence.png" }}
-                <img src="{{ $image.RelPermalink }} " alt="" class="mx-auto mb-4">
-                <h3 class="text-xl font-bold mb-3">Confidence & Communication</h3>
-                <p class="text-gray-500">At daycare, children have the opportunity to socialize with both kids and adults. They’ll gain confidence, build their self-esteem, and gain interpersonal and communication skills for when they enter grade school.</p>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 
 <div class="py-20">
@@ -166,7 +141,7 @@
 
 <div class="bg-gradient py-20">
     <div class="container px-4 mx-auto">
-        <div class="text-center">
+        <div class="text-center pb-6">
             <h2 class="text-3xl font-extrabold">See Our Facilities</h2>
             <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
@@ -182,14 +157,43 @@
     </div>
 </div>
 
+<div class="py-20">
+    <div class="container px-4 mx-auto">
+        <div class="text-center pb-6">
+            <h2 class="text-3xl font-extrabold">Your Angelic Treasure Belongs Here</h2>
+            <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+        </div>
+        <div class="grid grid-flow-row grid-cols-3 gap-5">
+            <div class="shadow-md rounded-md p-8 m-2">
+                {{ $image := resources.Get "images/icons/growth.png" }}
+                <img src="{{ $image.RelPermalink }} " alt="" class="mx-auto mb-4">
+                <h3 class="text-xl font-bold mb-3">Growth & Development</h3>
+                <p class="text-gray-500">Our programs are focused on supporting your child’s overall development. Your child will participate in a variety of age-appropriate activities that are educational, engaging, and most importantly—fun!</p>
+            </div>
+            <div class="shadow-md rounded-md p-8 m-2">
+                {{ $image := resources.Get "images/icons/academic.png" }}
+                <img src="{{ $image.RelPermalink }} " alt="" class="mx-auto mb-4">
+                <h3 class="text-xl font-bold mb-3">Academic Advancement</h3>
+                <p class="text-gray-500">It’s never too early to set your child up for future success. With our French offerings, well-rounded curriculum, and home-away-from-home learning environment, your child will have the tools they need to thrive.</p>
+            </div>
+            <div class="shadow-md rounded-md p-8 m-2">
+                {{ $image := resources.Get "images/icons/confidence.png" }}
+                <img src="{{ $image.RelPermalink }} " alt="" class="mx-auto mb-4">
+                <h3 class="text-xl font-bold mb-3">Confidence & Communication</h3>
+                <p class="text-gray-500">At daycare, children have the opportunity to socialize with both kids and adults. They’ll gain confidence, build their self-esteem, and gain interpersonal and communication skills for when they enter grade school.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="bg-gradient py-20">
     <div class="container px-4 mx-auto">
-        <div class="text-center">
+        <div class="text-center pb-6">
             <h2 class="text-3xl font-extrabold">Our Programs</h2>
             <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
-        <div class="grid grid-flow-row grid-cols-3 grid-rows-2 gap-4">
+        <div class="grid grid-flow-row grid-cols-3 gap-5">
             {{ range $.Site.Data.programs }}
             {{ partial "program.html" . }}
             {{ end }}
