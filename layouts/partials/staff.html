@@ -1,0 +1,11 @@
+<div class="grid grid-cols-3 gap-5">
+    <div>
+        {{ $img := resources.Get .photo }}
+        <img src="{{ $img.RelPermalink }}" alt="" class="rounded-lg">
+    </div>
+    <div class="col-span-2">
+        <h3 class="text-2xl font-bold mb-1">{{ .name }}</h3>
+        <h4 class="text-pink-500 text-lg font-bold">{{ .position }}</h4>
+        <p class="text-gray-500 pt-3">{{ .bio }}</p>
+    </div>
+</div>
