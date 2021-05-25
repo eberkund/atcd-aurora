@@ -1,6 +1,3 @@
-<!doctype html>
-<html lang="{{ .Site.LanguageCode }}">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +6,11 @@
 
     <title>{{ .Title }}</title>
 
-    {{ $sass := resources.Get "styles/app.scss" }}
-    {{ $styles := $sass | resources.ToCSS | resources.PostCSS | minify | fingerprint | resources.PostProcess }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    {{ $options := dict "inlineImports" true }}
+    {{ $styles := resources.Get "styles/app.css" }}
+    {{ $styles = $styles | resources.PostCSS $options }}
+    {{ if hugo.IsProduction }}
+    {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+    {{ end }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 </head>
