@@ -109,7 +109,7 @@
 
 <div class="py-20">
     <div class="container px-4 mx-auto">
-        <div class="grid grid-cols-3 gap-5">
+        <div class="grid grid-cols-3 gap-6">
             <div class="shadow rounded-lg text-2xl text-center flex flex-col justify-around">
                 <div class="text-center">
                     <h1>Aurora</h1>
@@ -137,7 +137,7 @@
 
 <div class="py-20">
     <div class="container px-4 mx-auto">
-        <div class="grid grid-cols-3 gap-5">
+        <div class="grid grid-cols-3 gap-6">
             <div class="col-span-1">
                 <img src="/about.png" alt="">
             </div>
@@ -157,7 +157,7 @@
             <h2 class="text-3xl font-extrabold" id="facilities">See Our Facilities</h2>
             <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
-        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ $images := resources.Match "images/facilities/*" }}
             {{ range $i := $images }}
             <div class="shadow-sm">
@@ -175,25 +175,10 @@
             <h2 class="text-3xl font-extrabold">Your Angelic Treasure Belongs Here</h2>
             <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
-        <div class="grid grid-flow-row lg:grid-cols-3 gap-5">
-            <div class="shadow-md rounded-md p-8 m-2 text-center">
-                {{ $image := resources.Get "images/icons/growth.png" }}
-                <img src="{{ $image.RelPermalink }} " class="mx-auto mb-5">
-                <h3 class="text-xl font-bold mb-2">Growth & Development</h3>
-                <p class="text-gray-500">Our programs are focused on supporting your child’s overall development. Your child will participate in a variety of age-appropriate activities that are educational, engaging and most importantly&ndash;fun!</p>
-            </div>
-            <div class="shadow-md rounded-md p-8 m-2 text-center">
-                {{ $image := resources.Get "images/icons/academic.png" }}
-                <img src="{{ $image.RelPermalink }} " class="mx-auto mb-5">
-                <h3 class=" text-xl font-bold mb-2">Academic Advancement</h3>
-                <p class="text-gray-500">It’s never too early to set your child up for future success. With our French offerings, well-rounded curriculum, and home-away-from-home learning environment, your child will have the tools they need to thrive.</p>
-            </div>
-            <div class="shadow-md rounded-md p-8 m-2 text-center">
-                {{ $image := resources.Get "images/icons/confidence.png" }}
-                <img src="{{ $image.RelPermalink }} " class="mx-auto mb-5">
-                <h3 class="text-xl font-bold mb-2">Confidence & Communication</h3>
-                <p class="text-gray-500">At daycare, children have the opportunity to socialize with both kids and adults. They’ll gain confidence, build their self-esteem, and gain interpersonal and communication skills for when they enter grade school.</p>
-            </div>
+        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{ range $.Site.Data.icons }}
+            {{ partial "icon.html" . }}
+            {{ end }}
         </div>
     </div>
 </div>
@@ -205,7 +190,7 @@
             <h2 class="text-3xl font-extrabold">Our Programs</h2>
             <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
-        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ range $.Site.Data.programs }}
             {{ partial "program.html" . }}
             {{ end }}
@@ -215,7 +200,7 @@
 
 <div class="container px-4 mx-auto py-20">
     <div class="text-center pb-6">
-        <h2 class="text-3xl font-extrabold" id="faq">FAQ</h2>
+        <h2 class="text-3xl font-extrabold" id="faq">Frequently Asked Questions</h2>
         <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
     </div>
     {{ range $.Site.Data.faq }}
@@ -232,7 +217,7 @@
             <h2 class="text-3xl font-extrabold" id="staff">Our Talented Team</h2>
             <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
         </div>
-        <div class="grid grid-flow-row lg:grid-cols-3 gap-5">
+        <div class="grid grid-flow-row lg:grid-cols-3 gap-6">
             {{ range $.Site.Data.staff }}
             {{ partial "staff.html" . }}
             {{ end }}
@@ -241,12 +226,17 @@
 </div>
 
 <div class="container mx-auto py-20">
+    <div class="text-center pb-6">
+        <h2 class="text-3xl font-extrabold" id="staff">Get in Touch</h2>
+        <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+    </div>
     <div class="grid grid-flow-row lg:grid-cols-2">
         {{ partial "form.html" . }}
         <div>
             <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/directoraurora/30min-facility-tour?hide_event_type_details=1&hide_gdpr_banner=1" style="height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            {{/* <div class="calendly-inline-widget" data-url="https://calendly.com/directoraurora/30min-facility-tour?hide_event_type_details=1&hide_gdpr_banner=1" style="height:700px;"></div> */}}
+            {{/*
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> */}}
             <!-- Calendly inline widget end -->
         </div>
     </div>
