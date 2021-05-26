@@ -1,7 +1,8 @@
 import { Loader } from "@googlemaps/js-api-loader";
+import * as params from "@params";
 
 const loader = new Loader({
-    apiKey: window.GOOGLE_MAPS_API_KEY,
+    apiKey: params.GOOGLE_MAPS_API_KEY,
     libraries: ["places"],
 });
 loader.loadCallback(initMap);
