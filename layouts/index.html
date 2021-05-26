@@ -101,20 +101,20 @@
         </div>
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="/hero.jpg" alt="">
+        {{ $hero := resources.Get "images/hero.jpg" }}
+        {{ $hero = $hero.Resize "x1600 webp" }}
+        <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ $hero.RelPermalink }}" alt="">
     </div>
 </div>
 
-
 <div class="py-20">
     <div class="container px-4 mx-auto">
-        <div class="text-center">
-            <h2 class="text-3xl font-extrabold">Location</h2>
-            <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
-        </div>
         <div class="grid grid-cols-3 gap-5">
             <div class="shadow rounded-lg text-2xl text-center flex flex-col justify-around">
-                <h1>Aurora</h1>
+                <div class="text-center">
+                    <h1>Aurora</h1>
+                    <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+                </div>
                 <address>
                     126 Wellington Street West<br>
                     Unit 103<br>
@@ -128,18 +128,20 @@
                     </a>
                 </div>
             </div>
-            <div id="map" class="col-span-2"></div>
+            {{/* <div id="map" class="col-span-2"></div> */}}
+            {{ $map := resources.Get "images/map.png" }}
+            <img src="{{ $map.RelPermalink }}" alt="" class="w-full col-span-2 rounded-lg shadow" loading="lazy">
         </div>
     </div>
 </div>
 
 <div class="py-20">
     <div class="container px-4 mx-auto">
-        <div class="flex">
-            <div>
+        <div class="grid grid-cols-3 gap-5">
+            <div class="col-span-1">
                 <img src="/about.png" alt="">
             </div>
-            <div>
+            <div class="col-span-2">
                 <h2 class="text-3xl font-extrabold">About Angelic Treasures Child Care</h2>
                 <div class="bg-pink-600 pt-1 mt-2 mb-4 w-20"></div>
                 <p class="text-gray-600 mb-2">Angelic Treasures Child Care is where quality child care and education meets family values. From French offerings to age-appropriate activities, we offer an array of programs focused on your child’s social, cognitive, emotional, psychological, and physical development. Plus, we provide an unparalleled home-away-from-home environment to ensure your child has an enjoyable and comfortable learning experience.</p>
