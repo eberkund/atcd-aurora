@@ -6,6 +6,8 @@
 
     <title>{{ .Title }}</title>
 
+    <link rel="icon" type="image/png" href="/favicon.png">
+
     {{ $options := dict "inlineImports" true }}
     {{ $styles := resources.Get "styles/app.scss" }}
     {{ $styles = $styles | resources.ToCSS | resources.PostCSS $options }}

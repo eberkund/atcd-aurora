@@ -203,12 +203,14 @@
         <h2 class="text-3xl font-extrabold" id="faq">Frequently Asked Questions</h2>
         <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
     </div>
-    {{ range $.Site.Data.faq }}
-    <div class="mb-3">
-        <h5 class="text-pink-500 text-lg font-bold mb-1">{{ .question }}</h5>
-        <p>{{ .answer }}</p>
+    <div class="flex flex-wrap gap-3">
+        {{ range $.Site.Data.faq }}
+        <div class="mb-3 w-2/5">
+            <h5 class="text-pink-500 text-lg font-bold mb-1">{{ .question }}</h5>
+            <p>{{ .answer }}</p>
+        </div>
+        {{ end }}
     </div>
-    {{ end }}
 </div>
 
 <div class="bg-gradient py-20">
