@@ -1,4 +1,4 @@
-<div class="bg-white rounded-lg overflow-hidden">
+<div class="bg-white rounded-lg overflow-hidden shadow-sm">
     {{ $img := resources.Get .image }}
     <img src="{{ $img.RelPermalink }}" alt="">
     <div class="p-6">
@@ -10,7 +10,7 @@
             {{ htmlUnescape .age_range }}
         </h4>
         {{ end }}
-        <p class="pt-3">
+        <p class="pt-3 text-gray-600">
             {{ htmlUnescape .description }}
         </p>
     </div>
