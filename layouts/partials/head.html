@@ -10,7 +10,7 @@
 
     {{ $options := dict "inlineImports" true "noMap" true }}
     {{ $styles := resources.Get "styles/app.css" }}
-    {{ $styles = $styles | resources.PostCSS $options }}
+    {{ $styles = $styles | resources.PostCSS }}
     {{ $styles = $styles | resources.Fingerprint | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 
