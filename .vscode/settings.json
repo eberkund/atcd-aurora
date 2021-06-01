@@ -20,5 +20,10 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "html.format.wrapAttributes": "preserve-aligned"
+    "[yaml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "html.format.wrapAttributes": "preserve-aligned",
+    "yaml.format.proseWrap": "always"
 }
