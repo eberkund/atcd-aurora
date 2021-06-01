@@ -15,4 +15,6 @@
     {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
     {{ end }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
