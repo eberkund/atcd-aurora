@@ -136,17 +136,23 @@
         <h2 class="text-3xl font-extrabold" id="faq">Frequently Asked Questions</h2>
         <div class="divider mx-auto"></div>
     </div>
-    <div class="bg-white max-w-xl mx-auto border border-gray-200" x-data="{selected:null}">
+    <div class="bg-white mx-auto border border-gray-200" x-data="{ selected:null }">
         <ul class="shadow-box">
             {{ range $i, $item := $.Site.Data.faq }}
             <li class="relative border-b border-gray-200">
                 <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== {{ $i }} ? selected = {{ $i }} : selected = null">
                     <div class="flex items-center justify-between">
                         <span class="text-pink-500 text-lg font-bold mb-1">{{ $item.question }}</span>
-                        <span class="ico-plus"></span>
+                        <span :class="{ 'transform rotate-180': selected == {{ $i }} }">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
                     </div>
                 </button>
-                <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container{{ $i }}" x-bind:style="selected == {{ $i }} ? 'max-height: ' + $refs.container{{ $i }}.scrollHeight + 'px' : ''">
+                <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                     x-ref="container{{ $i }}"
+                     :style="selected == {{ $i }} ? 'max-height: ' + $refs.container{{ $i }}.scrollHeight + 'px' : ''">
                     <div class="p-6">
                         <p>{{ $item.answer }}</p>
                     </div>
