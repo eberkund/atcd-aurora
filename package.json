@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@types/google.maps": "^3.44.6",
-    "@types/node": "^15.6.0"
+    "@types/node": "^15.6.0",
+    "alpinejs": "^2.8.2"
   }
 }
