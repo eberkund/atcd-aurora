@@ -36,16 +36,6 @@
                 </nav>
             </div>
 
-            <!--
-        Mobile menu, show/hide based on menu open state.
-
-        Entering: "duration-150 ease-out"
-          From: "opacity-0 scale-95"
-          To: "opacity-100 scale-100"
-        Leaving: "duration-100 ease-in"
-          From: "opacity-100 scale-100"
-          To: "opacity-0 scale-95"
-      -->
             <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
                  x-show="open"
                  x-transition:enter="duration-150 ease-out"
@@ -61,7 +51,7 @@
                             <img class="h-8 w-auto" src="{{ $logo.RelPermalink }}" alt="">
                         </div>
                         <div class="-mr-2">
-                            <button type="button" @click="open = false" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                            <button type="button" @click="open = false" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-offset-pink-600">
                                 <span class="sr-only">Close main menu</span>
                                 <!-- Heroicon name: outline/x -->
                                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -141,27 +131,6 @@
 </div>
 
 <div class="container mx-auto">
-    <div class="grid grid-rows-2 grid-cols-3">
-        <div class="transform scale-90 rotate-6 translate-y-14">
-            {{ $img := resources.Get "images/untitled-280.jpg" }}
-            <img src="{{ $img.RelPermalink }}" alt="" class="rounded-lg shadow">
-        </div>
-        <div class="col-start-1 transform scale-75 -rotate-6 translate-x-2 -translate-y-14">
-            {{ $img := resources.Get "images/untitled-606.jpg" }}
-            <img src="{{ $img.RelPermalink }}" alt="" class="rounded-lg shadow">
-        </div>
-        <div class="col-span-2 row-span-2 row-start-1 col-start-2 ml-10">
-            <div class="h-full flex flex-col align-middle justify-center">
-                <h2 class="text-3xl font-extrabold">About Angelic Treasures Child Care</h2>
-                <div class="divider mt-2 mb-4"></div>
-                <p class="text-gray-600 mb-2">Angelic Treasures Child Care is where quality child care and education meets family values. From French offerings to age-appropriate activities, we offer an array of programs focused on your child’s social, cognitive, emotional, psychological, and physical development. Plus, we provide an unparalleled home-away-from-home environment to ensure your child has an enjoyable and comfortable learning experience.</p>
-                <p class="text-gray-600">We love your angels as much as you do, so it’s no wonder we’re the best at what we do.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container mx-auto">
     <div class="grid lg:grid-cols-3">
         <div>
             {{ $img := resources.Get "images/untitled-280.jpg" }}
@@ -202,7 +171,7 @@
     <div class="container px-4 mx-auto">
         <div class="text-center pb-6">
             <h2 class="text-3xl font-extrabold">Your Angelic Treasure Belongs Here</h2>
-            <div class="dividier mx-auto"></div>
+            <div class="divider mx-auto"></div>
         </div>
         <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ range $.Site.Data.icons }}
@@ -231,14 +200,12 @@
         <h2 class="text-3xl font-extrabold" id="faq">Frequently Asked Questions</h2>
         <div class="divider mx-auto"></div>
     </div>
-    <div class="flex flex-wrap gap-3">
-        {{ range $.Site.Data.faq }}
-        <div class="mb-3 w-2/5">
-            <h5 class="text-pink-500 text-lg font-bold mb-1">{{ .question }}</h5>
-            <p>{{ .answer }}</p>
-        </div>
-        {{ end }}
+    {{ range $.Site.Data.faq }}
+    <div class="mb-3">
+        <h5 class="text-pink-500 text-lg font-bold mb-1">{{ .question }}</h5>
+        <p>{{ .answer }}</p>
     </div>
+    {{ end }}
 </div>
 
 <div class="bg-gradient py-20">
