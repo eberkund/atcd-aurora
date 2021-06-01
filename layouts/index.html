@@ -61,6 +61,7 @@
                 </div>
             </div>
             {{ $map := resources.Get "images/map.png" }}
+            {{ $map = $map.Resize "x1000 webp" }}
             <img src="{{ $map.RelPermalink }}" alt="" class="w-full col-span-2 rounded-lg shadow" loading="lazy">
         </div>
     </div>
@@ -70,8 +71,10 @@
     <div class="grid lg:grid-cols-3">
         <div>
             {{ $img := resources.Get "images/untitled-280.jpg" }}
+            {{ $img = $img.Resize "x600 webp" }}
             <img src="{{ $img.RelPermalink }}" alt="" class="rounded-lg shadow transform scale-90 rotate-6 translate-y-14">
             {{ $img := resources.Get "images/untitled-606.jpg" }}
+            {{ $img = $img.Resize "x600 webp" }}
             <img src="{{ $img.RelPermalink }}" alt="" class="rounded-lg shadow transform scale-75 -rotate-6 translate-x-2 -translate-y-14">
         </div>
         <div class="col-span-2 ml-10">
