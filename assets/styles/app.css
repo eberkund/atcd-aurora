@@ -9,3 +9,7 @@
 #map {
     height: 500px;
 }
+
+.divider {
+    @apply bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20;
+}

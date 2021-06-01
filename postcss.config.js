@@ -1,11 +1,10 @@
-const autoprefixer = require("autoprefixer");
-const tailwindcss = require("tailwindcss");
 const purgecss = require("@fullhuman/postcss-purgecss");
 
 module.exports = {
     plugins: [
-        autoprefixer(),
-        tailwindcss(),
+        require("postcss-import"),
+        require("tailwindcss"),
+        require("autoprefixer"),
         // purgecss({
         //     content: ["./hugo_stats.json"],
         //     defaultExtractor: (content) => {
