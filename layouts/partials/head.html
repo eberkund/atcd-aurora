@@ -16,5 +16,9 @@
     {{ end }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    {{ $scripts := resources.Get "scripts/main.ts" }}
+    {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "GOOGLE_MAPS_API_KEY") }}
+    {{ $options := dict "minify" true "sourceMap" "inline" "params" $params }}
+    {{ $js := $scripts | js.Build $options }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" async></script>
 </head>

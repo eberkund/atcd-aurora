@@ -1,3 +1,5 @@
+import "alpinejs";
+
 // import { Loader } from "@googlemaps/js-api-loader";
 // import * as params from "@params";
 
