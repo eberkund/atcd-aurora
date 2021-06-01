@@ -10,6 +10,10 @@
     height: 500px;
 }
 
+.main-heading {
+    @apply text-3xl font-extrabold;
+}
+
 .divider {
     @apply bg-pink-600 pt-1 mt-2 mb-4 w-20;
 }

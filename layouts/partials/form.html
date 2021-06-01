@@ -19,17 +19,38 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="country" class="block text-sm font-medium text-gray-700">Age of your Child</label>
-                    <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <label for="age" class="block text-sm font-medium text-gray-700">Age of your Children</label>
+                    <!-- <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:prose-sm">
                         <option>Infant (1 - 18 months)</option>
                         <option>Toddler (18 months - 2&half; years)</option>
                         <option>Preschool (2&half; - 4 years)</option>
                         <option>Kindergarten (4 - 5 years)</option>
                         <option>Before & After Care (5 - 10 years)</option>
-                    </select>
+                    </select> -->
+                    <label class="inline-flex items-center text-sm font-medium text-gray-700">
+                        <input type="checkbox" name="age" class="rounded mr-1">
+                        Infant (1 - 18 months)
+                    </label>
+                    <label class="inline-flex items-center text-sm font-medium text-gray-700">
+                        <input type="checkbox" name="age" class="rounded mr-1">
+                        Toddler (18 months - 2&half; years)
+                    </label>
+                    <label class="inline-flex items-center text-sm font-medium text-gray-700">
+                        <input type="checkbox" name="age" class="rounded mr-1">
+                        Preschool (2&half; - 4 years)
+                    </label>
+                    <label class="inline-flex items-center text-sm font-medium text-gray-700">
+                        <input type="checkbox" name="age" class="rounded mr-1">
+                        Kindergarten (4 - 5 years)
+                    </label>
+                    <label class="inline-flex items-center text-sm font-medium text-gray-700">
+                        <input type="checkbox" name="age" class="rounded mr-1">
+                        Before & After Care (5 - 10 years)
+                    </label>
                 </div>
 
                 <div class="mb-3">
+                    <label for="age" class="block text-sm font-medium text-gray-700">Type of Tour</label>
                     <label class="inline-flex items-center text-sm font-medium text-gray-700">
                         <input type="radio" class="form-radio" name="accountType" value="inperson">
                         <span class="ml-2">In-person</span>
@@ -39,11 +60,11 @@
                         <span class="ml-2">Virtual</span>
                     </label>
                 </div>
-
             </div>
+
             <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Send Inquiry
+                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Get in Touch
                 </button>
             </div>
         </div>
