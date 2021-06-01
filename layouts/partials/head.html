@@ -16,6 +16,6 @@
     {{ $scripts := resources.Get "scripts/main.ts" }}
     {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "GOOGLE_MAPS_API_KEY") }}
     {{ $options := dict "minify" true "sourceMap" "inline" "params" $params }}
-    {{ $js := $scripts | js.Build $options | resources.Fingerprint }}
+    {{ $js := $scripts | js.Build $options | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" async></script>
 </head>
