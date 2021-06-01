@@ -12,5 +12,6 @@ module.exports = {
         //         return els.tags.concat(els.classes, els.ids);
         //     },
         // }),
+        ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
     ],
 };

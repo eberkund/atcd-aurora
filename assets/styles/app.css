@@ -1,6 +1,6 @@
-@import "node_modules/tailwindcss/base";
-@import "node_modules/tailwindcss/components";
-@import "node_modules/tailwindcss/utilities";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .bg-gradient {
     background: linear-gradient(#d7eaff, #ffe1ef);
@@ -12,4 +12,12 @@
 
 .divider {
     @apply bg-pink-600 pt-1 mt-2 mb-4 w-20;
+}
+
+.two-col {
+    columns: 2;
+}
+
+.two-col li {
+    list-style-postion: inside;
 }
