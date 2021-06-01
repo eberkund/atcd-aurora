@@ -1,33 +1,29 @@
 {
-    "files.exclude": {
-        "**/node_modules": true,
-        "public": true,
-        "resources": true
-    },
-    "search.exclude": {
-        "hugo_stats.json": true,
-        "package-lock.json": true
-    },
-    "[css]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "[yaml]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "html.format.wrapAttributes": "preserve-aligned",
-    "yaml.format.proseWrap": "always"
+  "files.exclude": {
+    "**/node_modules": true,
+    "public": true,
+    "resources": true
+  },
+  "search.exclude": {
+    "hugo_stats.json": true,
+    "package-lock.json": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "editor.formatOnSave": true,
+  "html.format.wrapAttributes": "preserve-aligned",
+  "yaml.format.proseWrap": "always"
 }
