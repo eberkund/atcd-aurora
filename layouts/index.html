@@ -4,71 +4,7 @@
     <div class="max-w-7xl mx-auto">
         <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32" x-data="{ open: false }">
 
-            <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                <polygon points="50,0 100,0 50,100 0,100" />
-            </svg>
-
-            <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
-                <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
-                    <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                        <div class="flex items-center justify-between w-full md:w-auto">
-                            <a href="#">
-                                <span class="sr-only">Workflow</span>
-                                <img class="h-8 w-auto sm:h-10" src="/logo.png">
-                            </a>
-                            <div class="-mr-2 flex items-center md:hidden">
-                                <button type="button" @click="open = true" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                                    <span class="sr-only">Open main menu</span>
-                                    <!-- Heroicon name: outline/menu -->
-                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                        <a href="#facilities" class="font-medium text-gray-500 hover:text-gray-900">Facilities</a>
-                        <a href="#staff" class="font-medium text-gray-500 hover:text-gray-900">Staff</a>
-                        <a href="#faq" class="font-medium text-gray-500 hover:text-gray-900">FAQ</a>
-                        <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Contact</a>
-                    </div>
-                </nav>
-            </div>
-
-            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-                 x-show="open"
-                 x-transition:enter="duration-150 ease-out"
-                 x-transition:enter-start="opacity-0 scale-95"
-                 x-transition:enter-end="opacity-100 scale-100"
-                 x-transition:leave="duration-100 ease-in"
-                 x-transition:leave-start="opacity-100 scale-100"
-                 x-transition:leave-end="opacity-0 scale-95">
-                <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div class="px-5 pt-4 flex items-center justify-between">
-                        {{ $logo := resources.Get "images/logo.jpg" }}
-                        <div>
-                            <img class="h-8 w-auto" src="{{ $logo.RelPermalink }}" alt="">
-                        </div>
-                        <div class="-mr-2">
-                            <button type="button" @click="open = false" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-offset-pink-600">
-                                <span class="sr-only">Close main menu</span>
-                                <!-- Heroicon name: outline/x -->
-                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="px-2 pt-2 pb-3 space-y-1">
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
-                    </div>
-                </div>
-            </div>
-
+            {{ partial "nav.html" . }}
 
             <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div class="sm:text-center lg:text-left">
@@ -195,23 +131,38 @@
     </div>
 </div>
 
-<div class="container px-4 mx-auto py-20">
+<div class="container px-4 mx-auto py-20" id="faq">
     <div class="text-center pb-6">
         <h2 class="text-3xl font-extrabold" id="faq">Frequently Asked Questions</h2>
         <div class="divider mx-auto"></div>
     </div>
-    {{ range $.Site.Data.faq }}
-    <div class="mb-3">
-        <h5 class="text-pink-500 text-lg font-bold mb-1">{{ .question }}</h5>
-        <p>{{ .answer }}</p>
+    <div class="bg-white max-w-xl mx-auto border border-gray-200" x-data="{selected:null}">
+        <ul class="shadow-box">
+            {{ range $i, $item := $.Site.Data.faq }}
+            <li class="relative border-b border-gray-200">
+                <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== {{ $i }} ? selected = {{ $i }} : selected = null">
+                    <div class="flex items-center justify-between">
+                        <span class="text-pink-500 text-lg font-bold mb-1">{{ $item.question }}</span>
+                        <span class="ico-plus"></span>
+                    </div>
+                </button>
+                <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container{{ $i }}" x-bind:style="selected == {{ $i }} ? 'max-height: ' + $refs.container{{ $i }}.scrollHeight + 'px' : ''">
+                    <div class="p-6">
+                        <p>{{ $item.answer }}</p>
+                    </div>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
     </div>
-    {{ end }}
 </div>
 
-<div class="bg-gradient py-20">
+
+
+<div class="bg-gradient py-20" id="staff">
     <div class="container px-4 mx-auto">
         <div class="text-center pb-6">
-            <h2 class="text-3xl font-extrabold" id="staff">Our Talented Team</h2>
+            <h2 class="text-3xl font-extrabold">Our Talented Team</h2>
             <div class="divider mx-auto"></div>
         </div>
         <div class="grid grid-flow-row lg:grid-cols-3 gap-6">
@@ -222,9 +173,9 @@
     </div>
 </div>
 
-<div class="container mx-auto py-20">
+<div class="container mx-auto py-20" id="contact">
     <div class="text-center pb-6">
-        <h2 class="text-3xl font-extrabold" id="staff">Get in Touch</h2>
+        <h2 class="text-3xl font-extrabold">Get in Touch</h2>
         <div class="divider mx-auto"></div>
     </div>
     <div class="grid grid-flow-row lg:grid-cols-2">
