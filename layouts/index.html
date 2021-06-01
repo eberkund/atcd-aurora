@@ -119,7 +119,7 @@
             <div class="shadow rounded-lg text-xl text-center flex flex-col justify-around">
                 <div class="text-center mt-4">
                     <h1>Aurora</h1>
-                    <div class="divider"></div>
+                    <div class="divider mx-auto"></div>
                 </div>
                 <address class="not-italic">
                     126 Wellington Street West<br>
@@ -153,7 +153,7 @@
         <div class="col-span-2 row-span-2 row-start-1 col-start-2 ml-10">
             <div class="h-full flex flex-col align-middle justify-center">
                 <h2 class="text-3xl font-extrabold">About Angelic Treasures Child Care</h2>
-                <div class="bg-pink-600 pt-1 mt-2 mb-4 w-20"></div>
+                <div class="divider mt-2 mb-4"></div>
                 <p class="text-gray-600 mb-2">Angelic Treasures Child Care is where quality child care and education meets family values. From French offerings to age-appropriate activities, we offer an array of programs focused on your child’s social, cognitive, emotional, psychological, and physical development. Plus, we provide an unparalleled home-away-from-home environment to ensure your child has an enjoyable and comfortable learning experience.</p>
                 <p class="text-gray-600">We love your angels as much as you do, so it’s no wonder we’re the best at what we do.</p>
             </div>
@@ -172,7 +172,7 @@
         <div class="col-span-2 ml-10">
             <div class="h-full flex flex-col align-middle justify-center">
                 <h2 class="text-3xl font-extrabold">About Angelic Treasures Child Care</h2>
-                <div class="bg-pink-600 pt-1 mt-2 mb-4 w-20"></div>
+                <div class="divider"></div>
                 <p class="text-gray-600 mb-2">Angelic Treasures Child Care is where quality child care and education meets family values. From French offerings to age-appropriate activities, we offer an array of programs focused on your child’s social, cognitive, emotional, psychological, and physical development. Plus, we provide an unparalleled home-away-from-home environment to ensure your child has an enjoyable and comfortable learning experience.</p>
                 <p class="text-gray-600">We love your angels as much as you do, so it’s no wonder we’re the best at what we do.</p>
             </div>
@@ -184,7 +184,7 @@
     <div class="container px-4 mx-auto">
         <div class="text-center pb-6">
             <h2 class="text-3xl font-extrabold" id="facilities">See Our Facilities</h2>
-            <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+            <div class="divider mx-auto"></div>
         </div>
         <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ $images := resources.Match "images/facilities/*" }}
@@ -202,7 +202,7 @@
     <div class="container px-4 mx-auto">
         <div class="text-center pb-6">
             <h2 class="text-3xl font-extrabold">Your Angelic Treasure Belongs Here</h2>
-            <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+            <div class="dividier mx-auto"></div>
         </div>
         <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ range $.Site.Data.icons }}
@@ -216,7 +216,7 @@
     <div class="container px-4 mx-auto">
         <div class="text-center pb-6">
             <h2 class="text-3xl font-extrabold">Our Programs</h2>
-            <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+            <div class="divider mx-auto"></div>
         </div>
         <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ range $.Site.Data.programs }}
@@ -229,7 +229,7 @@
 <div class="container px-4 mx-auto py-20">
     <div class="text-center pb-6">
         <h2 class="text-3xl font-extrabold" id="faq">Frequently Asked Questions</h2>
-        <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+        <div class="divider mx-auto"></div>
     </div>
     <div class="flex flex-wrap gap-3">
         {{ range $.Site.Data.faq }}
@@ -245,7 +245,7 @@
     <div class="container px-4 mx-auto">
         <div class="text-center pb-6">
             <h2 class="text-3xl font-extrabold" id="staff">Our Talented Team</h2>
-            <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+            <div class="divider mx-auto"></div>
         </div>
         <div class="grid grid-flow-row lg:grid-cols-3 gap-6">
             {{ range $.Site.Data.staff }}
@@ -258,7 +258,7 @@
 <div class="container mx-auto py-20">
     <div class="text-center pb-6">
         <h2 class="text-3xl font-extrabold" id="staff">Get in Touch</h2>
-        <div class="bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20"></div>
+        <div class="divider mx-auto"></div>
     </div>
     <div class="grid grid-flow-row lg:grid-cols-2">
         {{ partial "form.html" . }}

@@ -11,5 +11,5 @@
 }
 
 .divider {
-    @apply bg-pink-600 pt-1 mt-2 mb-4 mx-auto w-20;
+    @apply bg-pink-600 pt-1 mt-2 mb-4 w-20;
 }
