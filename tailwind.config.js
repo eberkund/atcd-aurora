@@ -13,10 +13,15 @@ module.exports = {
         ],
         mode: "all",
     },
-    darkMode: false, // or 'media' or 'class'
+    darkMode: false,
     theme: {
-        extend: {},
+        extend: {
+            typography: {},
+        },
     },
     variants: {},
-    plugins: [require("@tailwindcss/forms")],
+    plugins: [
+        require("@tailwindcss/forms"),
+        require("@tailwindcss/typography"),
+    ],
 };
