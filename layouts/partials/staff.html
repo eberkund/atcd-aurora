@@ -1,7 +1,11 @@
 <div class="bg-white rounded-lg overflow-hidden shadow-sm text-center">
-    {{ $img := resources.Get .photo }}
-    {{ $img = $img.Resize "x400 webp" }}
-    <img src="{{ $img.RelPermalink }}" alt="" class="w-48 rounded-full mx-auto mt-6">
+    {{ $original := resources.Get .photo }}
+    <picture class="block w-48 rounded-full mx-auto mt-6">
+        {{ $img := $original.Resize "x400 webp" }}
+        <source srcset="{{ $img.RelPermalink }}" type="image/webp">
+        {{ $img := $original.Resize "x400" }}
+        <img src="{{ $img.RelPermalink }}" alt="">
+    </picture>
     <div class="p-6">
         <h3 class="text-2xl font-bold mb-1">
             {{ htmlUnescape .name }}
