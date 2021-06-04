@@ -1,0 +1,17 @@
+<li class="relative border-b border-gray-200">
+    <button type="button" class="w-full px-8 py-6 text-left focus:outline-none" @click="selected !== {{ .i }} ? selected = {{ .i }} : selected = null">
+        <div class="flex items-center justify-between">
+            <span class="text-pink-500 text-lg font-bold mb-1">{{ .item.question }}</span>
+            <span :class="{ 'transform rotate-180': selected == {{ .i }} }" class="h-5 w-5">
+                {{ readFile "assets/images/chevron.svg" | safeHTML }}
+            </span>
+        </div>
+    </button>
+    <div class="relative overflow-hidden transition-all max-h-0 duration-500"
+         x-ref="container{{ .i }}"
+         :style="selected == {{ .i }} ? 'max-height: ' + $refs.container{{ .i }}.scrollHeight + 'px' : ''">
+        <div class="px-8 pb-6 prose max-w-none">
+            <p>{{ markdownify .item.answer }}</p>
+        </div>
+    </div>
+</li>
