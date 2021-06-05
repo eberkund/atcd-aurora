@@ -139,8 +139,8 @@
         <h2 class="main-heading" id="faq">Frequently Asked Questions</h2>
         <div class="divider mx-auto"></div>
     </div>
-    <div class="bg-white mx-auto border border-gray-200" x-data="{ selected:null }">
-        <ul class="shadow-box">
+    <div class="bg-white mx-auto border border-gray-200 rounded-lg shadow-sm" x-data="{ selected:null }">
+        <ul>
             {{ range $i, $item := $.Site.Data.faq }}
             {{ partial "faq.html" (dict "i" $i "item" $item) }}
             {{ end }}
@@ -175,7 +175,7 @@
                target="_blank">
                 Via Calendly
                 <span class="ml-2 h-5 w-5">
-                    {{ readFile "assets/images/calendly.svg"| safeHTML }}
+                    {{ readFile "assets/images/calendly.svg" | safeHTML }}
                 </span>
             </a>
         </div>
