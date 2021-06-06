@@ -1,7 +1,6 @@
-baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Christian Daycare Aurora"
-disableKinds = ["section", "taxonomy", "page"]
+disableKinds = ["section", "taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 
 [build]
