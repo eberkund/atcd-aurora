@@ -25,5 +25,6 @@
   },
   "editor.formatOnSave": true,
   "html.format.wrapAttributes": "preserve-aligned",
-  "yaml.format.proseWrap": "always"
+  "yaml.format.proseWrap": "always",
+  "js/ts.implicitProjectConfig.checkJs": false
 }
