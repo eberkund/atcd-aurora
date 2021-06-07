@@ -1,9 +1,6 @@
 {
   "name": "atcd-aurora",
   "version": "1.0.0",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eberkund/atcd-aurora.git"
@@ -13,17 +10,17 @@
   },
   "homepage": "https://github.com/eberkund/atcd-aurora#readme",
   "devDependencies": {
-    "@googlemaps/js-api-loader": "^1.11.4",
-    "@tailwindcss/forms": "^0.3.2",
-    "autoprefixer": "^10.2.5",
-    "postcss-cli": "^8.3.1",
-    "postcss-import": "^14.0.2",
-    "tailwindcss": "^2.1.2"
+    "@types/google.maps": "^3.45.1",
+    "@types/node": "^15.12.1"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.4",
+    "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
-    "@types/google.maps": "^3.44.6",
-    "@types/node": "^15.6.0",
-    "alpinejs": "^2.8.2"
+    "alpinejs": "^2.8.2",
+    "autoprefixer": "^10.2.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.1.4"
   }
 }
