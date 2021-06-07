@@ -1,34 +1,31 @@
 - question: Do we have to be Christian to attend?
   answer:
     No, we are Christian but you do not have to be. In fact, the families in our
-    centres are from all backgrounds and all religions. We teach Christian
-    values and Bible stories; however, we do not implement services nor
-    sacraments. We teach children about all the values that are rooted in
-    Christianity such as love, forgiveness, honesty, charity, gentleness,
-    kindness and everything else that is wholesome. Parents/Guardians are asked
-    to sign a statement of faith to acknowledge that we will be teaching said
-    curriculum.
+    centres are from all backgrounds and all religions. We teach Bible stories
+    and values rooted in Christianity such as love, forgiveness, honesty,
+    charity, gentleness and kindness. Parents are asked to sign a statement of
+    faith to acknowledge that we will be teaching said curriculum.
 
 - question: Are you licensed by the Ministry of Education?
   answer:
-    Yes, the Ministry checks up on us regularly and we are very proud of our
-    positive and open relationship with them.
+    Yes, we are licensed by the Ministry of Education. We undergo frequent
+    inspections from our designated program advisor.
 
 - question: Are your staff qualified?
   answer:
-    All of our extraordinary staff are registered with the College of Early
-    Childhood Educators and have a diploma in ECE. Our staff has their
+    All our staff are registered with the College of Early Childhood Educators
+    and have a diploma in early childhood education. Our staff has their
     Vulnerable Sector Screenings and current CPR and First Aid certificates. We
-    encourage you to come in for a tour and meet some of them yourself.
+    encourage you to visit the centre for a tour and meet them yourself.
 
-- question: Are you a subsidized daycare?
-  answer:
-    We are currently unable to offer subsidies, we will be offering subdidy in
-    2022.
+# - question: Are you a subsidized daycare?
+#   answer:
+#     We are currently unable to offer subsidies, we will be offering subdidy in
+#     2022.
 
 - question: Is there a discount for siblings?
   answer:
-    Yes, we offer a discount for the eldest sibling, please contact us for more
+    Yes, we offer a discount for the eldest sibling. Please contact us for more
     inforamtion.
 
 - question: What meals do you provide?
@@ -43,10 +40,10 @@
   answer:
     We accept children of all abilities and learning needs. We believe in
     complete inclusion and integration. Please contact us with your child's
-    differing abilities and we will work with you to make it happen. We also
+    differing abilities and we will work with you to make it happen. We
     collaborate with healthcare professionals (occupational therapists,
-    physiotherapists, doctors, etc.) and we do everything we can to give our
-    special angels the best in service.
+    physiotherapists, doctors, etc.) and do everything we can to give our meet
+    your children's needs.
 
 - question: How do your centres differ from the rest?
   answer:
@@ -56,6 +53,9 @@
     mental. Our environment focuses on child-led learning and adheres to the
     pillars of _How Does Learning Happen_ and _Early Learning for Every Child
     Today (ELECT)_.
+
+- question: What payment methods do you accept?
+  answer: We accept preauthorized bank withdrawal made every two weeks.
 
 - question: How are you handling COVID-19?
   answer:
