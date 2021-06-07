@@ -1,16 +1,8 @@
-- name: Classes
-  description:
-    Angelic Treasures focuses on the development of children. Activities are
-    planned on a daily basis to help improve motor development, cognitive skills
-    and overall learning. Specific activities are designed to help each child
-    progress through age appropriate milestones.
-  image: images/programs/classes.jpg
-
 - name: Infant
   age_range: Ages 1 &ndash; 18 months
   description:
     Our infant program provides for the individual needs of the child. We
-    incorporate programming that allows for staff to encourAges independence and
+    incorporate programming that allows for staff to encourages independence and
     present fundamental foundations for this Ages group.
   image: images/programs/infant.jpg
 
@@ -27,7 +19,7 @@
   age_range: Ages 2&half; &ndash; 4 years
   description:
     During our daily preschool program we incorporate activities such as large
-    group, cognitive, fine and gross motor, sensory, languAges and dramatic play
+    group, cognitive, fine and gross motor, sensory, languages and dramatic play
     to encourAges growth and development.
   image: images/programs/preschool.jpg
 
@@ -39,11 +31,27 @@
     parents to meet the teachers at parent night and also at curriculum night.
   image: images/programs/kindergarten.jpg
 
+- name: Summer Camp
+  age_range: Ages 4 &ndash; 5 years
+  description:
+    French, sports, math, arts & crafts, science experiments and a host of other
+    activities that will enlighten and delight your child. Our ratios are low
+    and our staff is top notch.
+  image: images/programs/classes.jpg
+
 - name: Before & After
-  age_range: Ages 5 &ndash; 10 years
+  age_range: Ages 4 &ndash; 12 years
   description:
     Our program is dedicated to the development of children in school with
     age-appropriate, educational and stimulating activities that develop their
     skills to further their growth in all areas such as math, science, literacy
     and creativity.
   image: images/programs/before-after.jpg
+# - name: Classes
+#   description:
+#     Angelic Treasures focuses on the development of children. Activities are
+#     planned on a daily basis to help improve motor development, cognitive skills
+#     and overall learning. Specific activities are designed to help each child
+#     progress through age appropriate milestones.
+#   image: images/programs/classes.jpg
+
