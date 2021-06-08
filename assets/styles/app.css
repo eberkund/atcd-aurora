@@ -4,10 +4,11 @@
 
 .bg-gradient {
     background: linear-gradient(#d7eaff, #ffe1ef);
+    @apply border;
 }
 
 #map {
-    height: 500px;
+    min-height: 250px;
 }
 
 .main-heading {
