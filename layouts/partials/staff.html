@@ -1,4 +1,4 @@
-<div class="bg-white rounded-lg overflow-hidden shadow-sm text-center">
+<div class="bg-white rounded-lg overflow-hidden shadow-sm">
     {{ $original := resources.Get .photo }}
     <picture class="block w-48 rounded-full mx-auto mt-6">
         {{ $img := $original.Resize "x400 webp" }}
@@ -13,7 +13,7 @@
         <h4 class="text-pink-500 text-lg font-bold">
             {{ htmlUnescape .position }}
         </h4>
-        <p class="pt-3 text-gray-600">
+        <p class="pt-3 text-gray-500">
             {{ htmlUnescape .bio }}
         </p>
     </div>
