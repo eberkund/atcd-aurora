@@ -1,9 +1,12 @@
 <div class="bg-white rounded-lg overflow-hidden shadow-sm">
-    {{ $original := resources.Get .photo }}
-    <picture class="block w-48 rounded-full mx-auto mt-6">
-        {{ $img := $original.Resize "x400 webp" }}
+    {{ $original := resources.Get "images/staff/unknown.jpg" }}
+    {{ if .photo }}
+    {{ $original = resources.Get .photo }}
+    {{ end }}
+    <picture>
+        {{ $img := $original.Fill "800x450 smart webp" }}
         <source srcset="{{ $img.RelPermalink }}" type="image/webp">
-        {{ $img := $original.Resize "x400" }}
+        {{ $img := $original.Fill "800x450" }}
         <img src="{{ $img.RelPermalink }}" alt="">
     </picture>
     <div class="p-6">
