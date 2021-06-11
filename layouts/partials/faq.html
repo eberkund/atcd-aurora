@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between">
             <span class="text-pink-500 text-lg font-bold">{{ .item.question }}</span>
             <span :class="{ 'transform rotate-180': selected == {{ .i }} }" class="h-5 w-5">
-                {{ readFile "assets/images/chevron.svg" | safeHTML }}
+                {{ readFile "assets/images/icons/chevron.svg" | safeHTML }}
             </span>
         </div>
     </button>

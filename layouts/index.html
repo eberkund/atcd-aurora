@@ -87,8 +87,8 @@
             <div class="divider mx-auto"></div>
         </div>
         <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {{ range $.Site.Data.icons }}
-            {{ partial "icon.html" . }}
+            {{ range $.Site.Data.values }}
+            {{ partial "values.html" . }}
             {{ end }}
         </div>
     </div>
@@ -148,7 +148,7 @@
             <div class="mb-2">
                 <a href="tel:6478121179" class="flex items-center">
                     <div class="h-6 w-6 mr-2">
-                        {{ readFile "assets/images/phone.svg" | safeHTML }}
+                        {{ readFile "assets/images/icons/phone.svg" | safeHTML }}
                     </div>
                     <span>(647) 812-1179</span>
                 </a>
@@ -156,7 +156,7 @@
             <div class="flex items-center mb-2">
                 <a href="https://www.facebook.com/atcdAurora" target="_blank" class="flex items-center">
                     <div class="h-6 w-6 mr-2">
-                        {{ readFile "assets/images/facebook.svg" | safeHTML }}
+                        {{ readFile "assets/images/icons/facebook.svg" | safeHTML }}
                     </div>
                     atcdaurora
                 </a>
@@ -164,7 +164,7 @@
             <div class="flex items-center mb-4">
                 <a href="https://www.instagram.com/angelic.treasures.aurora/" target="_blank" class="flex items-center">
                     <div class="h-6 w-6 mr-2">
-                        {{ readFile "assets/images/instagram.svg" | safeHTML }}
+                        {{ readFile "assets/images/icons/instagram.svg" | safeHTML }}
                     </div>
                     angelic.treasures.aurora
                 </a>
