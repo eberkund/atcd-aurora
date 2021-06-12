@@ -172,10 +172,10 @@ function initMap(event: Event): void {
         clickableIcons: false,
         zoomControl: false,
         mapTypeControl: false,
-        streetViewControl: false,
         draggable: false,
         fullscreenControl: false,
         styles,
+        disableDefaultUI: true,
     });
     new google.maps.Marker({
         position,

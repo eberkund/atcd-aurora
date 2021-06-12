@@ -4,6 +4,8 @@ command = "hugo --minify"
 
 [context.production.environment]
 HUGO_VERSION = "0.83.1"
+GOOGLE_MAPS_API_KEY = "AIzaSyBkJ6VAoRpfZ6OiOcAqiO5A9Jfo_ggN0gs"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.83.1"
+GOOGLE_MAPS_API_KEY = "AIzaSyBkJ6VAoRpfZ6OiOcAqiO5A9Jfo_ggN0gs"

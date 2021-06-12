@@ -6,6 +6,11 @@
       "command": "hugo serve",
       "label": "hugo: serve",
       "detail": "start hugo development server",
+      "options": {
+        "env": {
+          "GOOGLE_MAPS_API_KEY": "AIzaSyAyz1ZuxDylHY9lVt4ex1hnBOWgmu02kyI"
+        }
+      },
       "group": {
         "kind": "build",
         "isDefault": true
