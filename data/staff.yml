@@ -1,13 +1,37 @@
-- bio:
-  position: Supervisor
-  name: Vicky Dimitropoulos
-  photo: "images/staff/unknown.jpg"
+- name: Vicky Dimitropoulos
+  position: Centre Supervisor
+  photo: "images/staff/vicky.jpg"
+  bio: >-
+    I am a wife and mother of two beautiful children. I graduated from Seneca
+    College in 1998 with Honors where I obtained my Diploma of Early Childhood
+    Education. I have over 23 years of experience working with children ages 0
+    through 12 and loved every moment of it. 
+
+    I decided to become an Early Childhood Educator because I wanted to help
+    shape and form the children of tomorrow. I believe that children are our
+    future, they require love and nurturing to become strong independent
+    individuals.  As the supervisor of this center, I am looking forward to
+    working with the staff and families to create a welcoming environment for
+    the children.
+
+- name: Jahnae Heart
+  position: RECE
+  photo: "images/staff/jahnae.png"
+  bio: |
+    I am a graduate of the ECE program at Centennial college. Over the years I
+    have had the privilege of working with infants, toddlers, preschoolers and
+    school agers.  
+
+    I have many hobbies, one of them includes taking care of my
+    little sisters. I have always had a love for children and through that
+    interest, I wish to become a kindergarten teacher one day.  I look forward
+    to meeting each and everyone of you.
 
 # - bio: >-
 #     I am a wife and mother of two boys. I graduated from Seneca College in 2015
 #     where I obtained my Diploma in Early Childhood Education. I have over 10 years of
 #     experience working with children up to age 12 and loved every moment of it. I
-#     decided to become an educator because I believe that children are our future and 
+#     decided to become an educator because I believe that children are our future and
 #     it's out duty to raise our children to lead healthy, successful and independent lives.
 #   position: Lead ECE
 #   name: Laura Castillo

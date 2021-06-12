@@ -41,32 +41,7 @@
     </div>
 </div>
 
-<div class="py-20">
-    <div class="container px-4 mx-auto">
-        <div class="text-center pb-6">
-            <h2 class="main-heading">Location</h2>
-            <div class="divider mx-auto"></div>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="shadow rounded-lg text-center" id="map-overlay">
-                <address class="not-italic mb-8 pt-6">
-                    126 Wellington Street West #103<br>
-                    Aurora, Ontario, L4G 2N9
-                </address>
-                <div>
-                    <a href="tel:6478121179" class="w-full px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-pink-400 hover:bg-pink-500 md:py-4 md:text-lg md:px-10">
-                        Call Now
-                    </a>
-                    <span class="block mt-8">(647) 812-1179</span>
-                </div>
-            </div>
-            <div id="map" class="rounded shadow col-span-2"></div>
-            {{ $map := resources.Get "images/map.png" }}
-            {{ $map = $map.Resize "x1000 webp" }}
-            <!-- <img src="{{ $map.RelPermalink }}" alt="" class="w-full col-span-2 rounded-lg shadow" loading="lazy"> -->
-        </div>
-    </div>
-</div>
+{{ partial "location.html" . }}
 
 <div class="container mx-auto">
     <div class="grid lg:grid-cols-3">
@@ -112,8 +87,8 @@
             <div class="divider mx-auto"></div>
         </div>
         <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {{ range $.Site.Data.icons }}
-            {{ partial "icon.html" . }}
+            {{ range $.Site.Data.values }}
+            {{ partial "values.html" . }}
             {{ end }}
         </div>
     </div>
@@ -169,11 +144,11 @@
     <div class="grid grid-flow-row lg:grid-cols-3 gap-6">
         <div class="text-gray-500 px-4 py-5 sm:p-6">
             <h4 class="text-xl text-black font-bold mb-2">Contact Information</h4>
-            <p class="mb-2">Give us a call, follow us on social media or book a center tour using Calendly or the form.</p>
+            <p class="mb-4">Give us a call, follow us on social media or book a center tour using Calendly or the form.</p>
             <div class="mb-2">
                 <a href="tel:6478121179" class="flex items-center">
                     <div class="h-6 w-6 mr-2">
-                        {{ readFile "assets/images/phone.svg" | safeHTML }}
+                        {{ readFile "assets/images/icons/phone.svg" | safeHTML }}
                     </div>
                     <span>(647) 812-1179</span>
                 </a>
@@ -181,27 +156,39 @@
             <div class="flex items-center mb-2">
                 <a href="https://www.facebook.com/atcdAurora" target="_blank" class="flex items-center">
                     <div class="h-6 w-6 mr-2">
-                        {{ readFile "assets/images/facebook.svg" | safeHTML }}
+                        {{ readFile "assets/images/icons/facebook.svg" | safeHTML }}
                     </div>
                     atcdaurora
                 </a>
             </div>
-            <div class="flex items-center mb-2">
+            <div class="flex items-center mb-4">
                 <a href="https://www.instagram.com/angelic.treasures.aurora/" target="_blank" class="flex items-center">
                     <div class="h-6 w-6 mr-2">
-                        {{ readFile "assets/images/instagram.svg" | safeHTML }}
+                        {{ readFile "assets/images/icons/instagram.svg" | safeHTML }}
                     </div>
                     angelic.treasures.aurora
                 </a>
             </div>
-            <a href="https://calendly.com/directoraurora/30min-facility-tour"
-               class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
-               target="_blank">
-                Via Calendly
-                <span class="ml-2 h-5 w-5">
-                    {{ readFile "assets/images/calendly.svg" | safeHTML }}
-                </span>
-            </a>
+            <!-- <table class="table-auto border-collapse border w-full rounded-lg">
+                <thead>
+                    <th>Day</th>
+                    <th>Hours</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border p-2">Weekdays</td>
+                        <td class="border p-2">7:00AM to 6:00PM</td>
+                    </tr>
+                    <tr>
+                        <td class="border p-2">Weekends</td>
+                        <td class="border p-2">Closed</td>
+                    </tr>
+                    <tr>
+                        <td class="border p-2">Statutory Holidays</td>
+                        <td class="border p-2">Closed</td>
+                    </tr>
+                </tbody>
+            </table> -->
         </div>
         <div class="col-span-2">
             {{ partial "form.html" . }}
