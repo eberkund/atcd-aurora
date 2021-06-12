@@ -6,7 +6,7 @@
         </div>
         <div class="relative">
             <div id="map" class="rounded-lg shadow col-span-2 w-full"></div>
-            <div class="absolute bg-white z-10 top-12 bottom-12 left-12 p-6 right-12 sm:right-auto rounded text-center">
+            <div class="absolute bg-white z-10 top-12 bottom-12 left-12 p-6 right-12 sm:right-auto rounded text-center shadow-sm">
                 <div class="mt-4">
                     <h2>Aurora</h2>
                     <div class="divider mx-auto"></div>
@@ -23,9 +23,7 @@
                 <span class="block">(647) 812-1179</span>
             </div>
         </div>
-
         <div class="grid md:grid-cols-3 gap-6">
-
             {{ $map := resources.Get "images/map.png" }}
             {{ $map = $map.Resize "x1000 webp" }}
             <!-- <img src="{{ $map.RelPermalink }}" alt="" class="w-full col-span-2 rounded-lg shadow" loading="lazy"> -->
