@@ -43,9 +43,9 @@
 
 {{ partial "location.html" . }}
 
-<div class="container mx-auto">
-    <div class="grid lg:grid-cols-3">
-        <div>
+<div class="container mx-auto px-4 py-20 lg:py-0">
+    <div class="grid lg:grid-cols-3 gap-6">
+        <div class="">
             {{ $img := resources.Get "images/untitled-280.jpg" }}
             {{ $img = $img.Resize "x600 webp" }}
             <img src="{{ $img.RelPermalink }}" alt="" class="rounded-lg shadow transform scale-90 rotate-6 translate-y-14">
@@ -54,9 +54,9 @@
             {{ $img = $img.Resize "x600 webp" }}
             <img src="{{ $img.RelPermalink }}" alt="" class="rounded-lg shadow transform scale-75 -rotate-6 translate-x-2 -translate-y-14">
         </div>
-        <div class="col-span-2 ml-10">
+        <div class="col-span-2">
             <div class="h-full flex flex-col align-middle justify-center">
-                <h2 class="main-heading">About Angelic Treasures Child Care</h2>
+                <h2 class="main-heading">About Us</h2>
                 <div class="divider"></div>
                 <p class="text-gray-600 mb-2">Angelic Treasures Child Care is where quality child care and education meets family values. From French offerings to age-appropriate activities, we offer an array of programs focused on your child’s social, cognitive, emotional, psychological, and physical development. Plus, we provide an unparalleled home-away-from-home environment to ensure your child has an enjoyable and comfortable learning experience.</p>
                 <p class="text-gray-600">We love your angels as much as you do, so it’s no wonder we’re the best at what we do.</p>
