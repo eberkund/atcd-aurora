@@ -108,13 +108,7 @@
         <h2 class="main-heading" id="faq">Frequently Asked Questions</h2>
         <div class="divider mx-auto"></div>
     </div>
-    <div class="bg-white mx-auto border border-gray-200 rounded-lg shadow-sm" x-data="{ selected:null }">
-        <ul>
-            {{ range $i, $item := $.Site.Data.faq }}
-            {{ partial "faq.html" (dict "i" $i "item" $item) }}
-            {{ end }}
-        </ul>
-    </div>
+    {{ partial "faq.html" . }}
 </div>
 
 <div class="bg-gradient py-20" id="staff">
@@ -164,26 +158,6 @@
                     angelic.treasures.aurora
                 </a>
             </div>
-            <!-- <table class="table-auto border-collapse border w-full rounded-lg">
-                <thead>
-                    <th>Day</th>
-                    <th>Hours</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="border p-2">Weekdays</td>
-                        <td class="border p-2">7:00AM to 6:00PM</td>
-                    </tr>
-                    <tr>
-                        <td class="border p-2">Weekends</td>
-                        <td class="border p-2">Closed</td>
-                    </tr>
-                    <tr>
-                        <td class="border p-2">Statutory Holidays</td>
-                        <td class="border p-2">Closed</td>
-                    </tr>
-                </tbody>
-            </table> -->
         </div>
         <div class="col-span-2">
             {{ partial "form.html" . }}
