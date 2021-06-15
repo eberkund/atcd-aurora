@@ -1,4 +1,6 @@
 //@ts-nocheck
+import * as params from "@params";
+
 !(function (f, b, e, v, n, t, s) {
     if (f.fbq) return;
     n = f.fbq = function () {
@@ -22,6 +24,9 @@
     "script",
     "https://connect.facebook.net/en_US/fbevents.js"
 );
+
+const branch = { Branch: params.BRANCH };
+console.log(branch);
 
 fbq("init", "289970985852099");
 fbq("track", "PageView");
