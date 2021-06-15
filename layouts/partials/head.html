@@ -13,9 +13,9 @@
     {{ $styles = $styles | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 
-    {{ $scripts := resources.Get "scripts/main.ts" }}
-    {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "GOOGLE_MAPS_API_KEY") }}
+    {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "GOOGLE_MAPS_API_KEY") "BRANCH" (getenv "BRANCH") }}
     {{ $options := dict "minify" true "sourceMap" "inline" "params" $params }}
+    {{ $scripts := resources.Get "scripts/main.ts" }}
     {{ $js := $scripts | js.Build $options | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" async></script>
 </head>

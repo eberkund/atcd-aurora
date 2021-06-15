@@ -2,6 +2,7 @@ languageCode = "en-us"
 title = "Christian Daycare Aurora"
 disableKinds = ["section", "taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
+enableGitInfo = true
 
 [build]
 writeStats = true
