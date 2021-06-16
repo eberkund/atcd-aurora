@@ -13,31 +13,35 @@
                 <label for="phone" class="block text-xs mb-1 font-medium text-gray-500 uppercase">Phone Number</label>
                 <input type="text" name="phone" id="phone" autocomplete="tel" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required>
             </div>
-            <div class="mb-3">
-                <label for="age[]" class="block text-xs mb-1 font-medium text-gray-500 uppercase">Age of your Children</label>
+            <fieldset class="mb-3">
+                <legend class="block text-xs mb-1 font-medium text-gray-500 uppercase">
+                    Age of your Children
+                </legend>
                 <label class="flex items-center text-sm font-medium text-gray-700 mb-1">
-                    <input type="checkbox" name="age['Infant']" value="Yes" class="rounded mr-2">
+                    <input type="checkbox" name="age[]" value="Infant" class="rounded mr-2">
                     Infant (1&ndash;18 months)
                 </label>
                 <label class="flex items-center text-sm font-medium text-gray-700 mb-1">
-                    <input type="checkbox" name="age['Toddler']" value="Yes" class="rounded mr-2">
+                    <input type="checkbox" name="age[]" value="Toddler" class="rounded mr-2">
                     Toddler (18 months&ndash;2&half; years)
                 </label>
                 <label class="flex items-center text-sm font-medium text-gray-700 mb-1">
-                    <input type="checkbox" name="age['Preschool']" value="Yes" class="rounded mr-2">
+                    <input type="checkbox" name="age[]" value="Preschool" class="rounded mr-2">
                     Preschool (2&half;&ndash;4 years)
                 </label>
                 <label class="flex items-center text-sm font-medium text-gray-700 mb-1">
-                    <input type="checkbox" name="age['Kindergarten']" value="Yes" class="rounded mr-2">
+                    <input type="checkbox" name="age[]" value="Kindergarten" class="rounded mr-2">
                     Kindergarten (4&ndash;5 years)
                 </label>
                 <label class="flex items-center text-sm font-medium text-gray-700 mb-1">
-                    <input type="checkbox" name="age['Before & After']" value="Yes" class="rounded mr-2">
+                    <input type="checkbox" name="age[]" value="Before & After" class="rounded mr-2">
                     Before & After (4&ndash;12 years)
                 </label>
-            </div>
-            <div class="mb-3">
-                <label for="tour_type" class="block text-xs mb-1 font-medium text-gray-500 uppercase">Type of Tour</label>
+            </fieldset>
+            <fieldset class="mb-3">
+                <legend class="block text-xs mb-1 font-medium text-gray-500 uppercase">
+                    Type of Tour
+                </legend>
                 <label class="inline-flex items-center text-sm font-medium text-gray-700">
                     <input type="radio" class="form-radio" name="tour_type" value="In-person">
                     <span class="ml-2">In-person</span>
@@ -46,7 +50,7 @@
                     <input type="radio" class="form-radio" name="tour_type" value="Virtual">
                     <span class="ml-2">Virtual</span>
                 </label>
-            </div>
+            </fieldset>
         </div>
         <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
