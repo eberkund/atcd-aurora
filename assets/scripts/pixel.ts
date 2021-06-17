@@ -25,8 +25,8 @@ import * as params from "@params";
     "https://connect.facebook.net/en_US/fbevents.js"
 );
 
-const branch = { Branch: params.HEAD };
-console.log(branch);
+const trackingParams = { branch: params.HEAD };
+console.log(trackingParams);
 
 fbq("init", "289970985852099");
 fbq("track", "PageView");
