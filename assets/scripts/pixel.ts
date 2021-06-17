@@ -25,7 +25,7 @@ import * as params from "@params";
     "https://connect.facebook.net/en_US/fbevents.js"
 );
 
-const branch = { Branch: params.BRANCH };
+const branch = { Branch: params.HEAD };
 console.log(branch);
 
 fbq("init", "289970985852099");
