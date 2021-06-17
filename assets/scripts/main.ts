@@ -1,3 +1,3 @@
 import "alpinejs";
-import "scripts/maps";
+// import "scripts/maps";
 import "scripts/pixel";
