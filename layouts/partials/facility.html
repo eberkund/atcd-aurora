@@ -3,6 +3,6 @@
         {{ $img := .Resize "600x webp" }}
         <source srcset="{{ $img.RelPermalink }}" type="image/webp">
         {{ $img := .Resize "600x" }}
-        <img src="{{ $img.RelPermalink }}" alt="">
+        <img src="{{ $img.RelPermalink }}" alt="" loading="lazy">
     </picture>
 </div>
