@@ -36,7 +36,7 @@
             {{ $img := $hero.Resize "x1600 webp" }}
             <source srcset="{{ $img.RelPermalink }}" type="image/webp" class="object-cover">
             {{ $img := $hero.Resize "x1600" }}
-            <img src="{{ $img.RelPermalink }}" alt="" class="object-cover block w-full">
+            <img src="{{ $img.RelPermalink }}" alt="Picture of baby" class="object-cover block w-full">
         </picture>
     </div>
 </div>
@@ -143,7 +143,7 @@
                 </a>
             </div>
             <div class="flex items-center mb-2">
-                <a href="https://www.facebook.com/atcdAurora" target="_blank" class="flex items-center">
+                <a href="https://www.facebook.com/atcdAurora" rel="noreferrer" target="_blank" class="flex items-center">
                     <div class="h-6 w-6 mr-2">
                         {{ readFile "assets/images/icons/facebook.svg" | safeHTML }}
                     </div>
@@ -151,7 +151,7 @@
                 </a>
             </div>
             <div class="flex items-center mb-4">
-                <a href="https://www.instagram.com/angelic.treasures.aurora/" target="_blank" class="flex items-center">
+                <a href="https://www.instagram.com/angelic.treasures.aurora/" rel="noreferrer" target="_blank" class="flex items-center">
                     <div class="h-6 w-6 mr-2">
                         {{ readFile "assets/images/icons/instagram.svg" | safeHTML }}
                     </div>
