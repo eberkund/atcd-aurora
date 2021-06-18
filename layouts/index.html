@@ -46,7 +46,13 @@
 <div class="container mx-auto px-4">
     <div class="grid lg:grid-cols-3 gap-6 pb-20">
         <div>
-            <img src="/about.png">
+            {{ $img := resources.Get "images/about.png" }}
+            <picture>
+                {{ $img := $img.Resize "x800 webp" }}
+                <source srcset="{{ $img.RelPermalink }}" type="image/webp" class="object-cover">
+                {{ $img := $img.Resize "x800" }}
+                <img src="{{ $img.RelPermalink }}" class="object-cover block w-full">
+            </picture>
         </div>
         <div class="lg:col-span-2">
             <div class="h-full flex flex-col align-middle justify-center">
