@@ -33,9 +33,9 @@
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         {{ $hero := resources.Get "images/hero.jpg" }}
         <picture class="flex h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full">
-            {{ $img := $hero.Resize "x1600 webp" }}
+            {{ $img := $hero.Resize "1600x webp" }}
             <source srcset="{{ $img.RelPermalink }}" type="image/webp" class="object-cover">
-            {{ $img := $hero.Resize "x1600" }}
+            {{ $img := $hero.Resize "1600x" }}
             <img src="{{ $img.RelPermalink }}" alt="Picture of baby" class="object-cover block w-full">
         </picture>
     </div>
