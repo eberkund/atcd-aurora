@@ -4,6 +4,7 @@ title = "Christian Daycare Aurora"
 disableKinds = ["section", "taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 enableGitInfo = true
+enableRobotsTXT = true
 
 [build]
 writeStats = true
