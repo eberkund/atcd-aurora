@@ -16,8 +16,8 @@
         <h4 class="text-pink-500 text-lg font-bold text-center">
             {{ htmlUnescape .position }}
         </h4>
-        <p class="pt-3 text-gray-500 text-left">
-            {{ htmlUnescape .bio }}
-        </p>
+        <div class="text-gray-500 pt-3">
+            {{ markdownify .bio }}
+        </div>
     </div>
 </div>
