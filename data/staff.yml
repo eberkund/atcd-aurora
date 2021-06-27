@@ -11,6 +11,7 @@
 
 - name: Jahnae Heart
   position: RECE
+  photo: images/staff/jahnae.jpg
   bio: >-
     I am a graduate of the ECE program at Centennial college. Over the years I
     have had the privilege of working with infants, toddlers, preschoolers and
@@ -31,6 +32,7 @@
 
 - name: Camila Pessoa
   position: RECE
+  photo: images/staff/camila.jpg
   bio: >-
     I was born and raised in Brazil and I immigrated to Canada in 2017 to study
     at George Brown College. As a parent of three children, I recognize the
@@ -48,3 +50,11 @@
     College were I received both my Early Childhood Education and Personal
     Support Worker diploma. I have worked with toddlers, pre-schoolers, school
     age and JK/SK. I look forward to meeting each and every one of you.
+
+- name: Paul Berkun-Drevnig
+  position: Handyman
+  photo: images/staff/paul.jpg
+  bio: >-
+    I am currently studying for architecture and city planning. I am very
+    friendly and love to talk. When I am not causing Aaron's hair to go gray you
+    may spot me painting baseboards or patching drywall.
