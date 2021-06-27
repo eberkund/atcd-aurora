@@ -7,4 +7,9 @@ enableGitInfo = true
 enableRobotsTXT = true
 
 [build]
-writeStats = true
+  writeStats = true
+
+[params]
+  description = "Angelic Treasures focuses on the development of children. Activities are planned on a daily basis to help improve motor development, cognitive skills and overall ..."
+#   images = ["site-feature-image.jpg"]
+#   title = "My cool site"
