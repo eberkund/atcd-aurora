@@ -1,3 +1,21 @@
+- name: Sharon Yang
+  position: Director
+  photo: "images/staff/sharon.jpg"
+  bio: >-
+    ...
+
+- name: Erik Berkun-Drevnig
+  position: Director
+  photo: "images/staff/erik.jpg"
+  bio: >-
+    ...
+
+- name: Aaron Chen
+  position: Director
+  photo: "images/staff/aaron.jpg"
+  bio: >-
+    ...
+
 - name: Vicky Dimitropoulos
   position: Supervisor
   photo: "images/staff/vicky.jpg"

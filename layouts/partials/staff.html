@@ -4,9 +4,9 @@
     {{ $original = resources.Get .photo }}
     {{ end }}
     <picture>
-        {{ $img := $original.Fill "800x533 smart webp" }}
+        {{ $img := $original.Resize "800x webp" }}
         <source srcset="{{ $img.RelPermalink }}" type="image/webp">
-        {{ $img := $original.Fill "800x533" }}
+        {{ $img := $original.Resize "800x jpg" }}
         <img src="{{ $img.RelPermalink }}" alt="{{ .name }}" loading="lazy">
     </picture>
     <div class="p-6">
