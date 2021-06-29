@@ -6,10 +6,6 @@
     background: linear-gradient(#d7eaff, #ffe1ef);
 }
 
-#map {
-    height: 500px;
-}
-
 .main-heading {
     @apply text-3xl font-extrabold;
 }
@@ -34,4 +30,8 @@ body {
 
 main {
     flex: 1;
+}
+
+.card {
+    @apply overflow-hidden rounded-lg shadow bg-white;
 }
