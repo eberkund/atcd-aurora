@@ -35,3 +35,7 @@ main {
 .card {
     @apply overflow-hidden rounded-lg shadow bg-white;
 }
+
+th, td {
+    @apply p-2;
+}

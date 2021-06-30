@@ -5,7 +5,15 @@
             <div class="divider mx-auto"></div>
         </div>
         <div class="relative card">
-            <img src="/map-trimmed.svg" alt="Map of Aurora" class="object-cover md:absolute w-full h-full" draggable="false">
+            <!-- <img src="/map-trimmed.png" alt="Map of Aurora" class="object-cover w-full md:absolute md:h-full" draggable="false"> -->
+
+            {{ $hero := resources.Get "images/map-trimmed.png" }}
+            <picture>
+                {{ $img := $hero.Resize "1500x webp" }}
+                <!-- <source srcset="{{ $img.RelPermalink }}" type="image/webp"  class="object-cover w-full md:absolute md:h-full"> -->
+                {{ $img := $hero.Resize "1500x" }}
+                <img src="{{ $img.RelPermalink }}" alt="Map of Aurora"  class="object-cover w-full md:absolute md:h-full">
+            </picture>
             <div class="z-50 rounded text-center md:shadow-sm md:m-5 py-10 md:w-72 md:relative w-full bg-white">
                 <address class="not-italic block">
                     Unit 103<br>
