@@ -1,20 +1,20 @@
-- name: Sharon Yang
-  position: Director
-  photo: "images/staff/sharon.jpg"
-  bio: >-
-    ...
+# - name: Sharon Yang
+#   position: Director
+#   photo: "images/staff/sharon.jpg"
+#   bio: >-
+#     ...
 
-- name: Erik Berkun-Drevnig
-  position: Director
-  photo: "images/staff/erik.jpg"
-  bio: >-
-    ...
+# - name: Erik Berkun-Drevnig
+#   position: Director
+#   photo: "images/staff/erik.jpg"
+#   bio: >-
+#     ...
 
-- name: Aaron Chen
-  position: Director
-  photo: "images/staff/aaron.jpg"
-  bio: >-
-    ...
+# - name: Aaron Chen
+#   position: Director
+#   photo: "images/staff/aaron.jpg"
+#   bio: >-
+#     ...
 
 - name: Vicky Dimitropoulos
   position: Supervisor
@@ -69,10 +69,10 @@
     Support Worker diploma. I have worked with toddlers, pre-schoolers, school
     age and JK/SK. I look forward to meeting each and every one of you.
 
-- name: Paul Berkun-Drevnig
-  position: Handyman
-  photo: images/staff/paul.jpg
-  bio: >-
-    I am currently studying architecture and urban planning. I am very friendly
-    and love to talk. When I am not causing Aaron's hair to go gray you may spot
-    me painting baseboards or patching drywall.
+# - name: Paul Berkun-Drevnig
+#   position: Handyman
+#   photo: images/staff/paul.jpg
+#   bio: >-
+#     I am currently studying architecture and urban planning. I am very friendly
+#     and love to talk. When I am not causing Aaron's hair to go gray you may spot
+#     me painting baseboards or patching drywall.
