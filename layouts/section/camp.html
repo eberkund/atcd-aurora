@@ -4,6 +4,20 @@
 
 {{ partial "camp/itinerary2.html" . }}
 
+<div class="py-20">
+    <div class="container px-4 mx-auto">
+        <div class="text-center pb-6">
+            <h2 class="main-heading">What to Expect</h2>
+            <div class="divider mx-auto"></div>
+        </div>
+        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{ range $.Site.Data.camp.expect }}
+            {{ partial "values.html" . }}
+            {{ end }}
+        </div>
+    </div>
+</div>
+
 {{ partial "camp/menu.html" . }}
 
 <div class="container px-4 mx-auto py-20">
