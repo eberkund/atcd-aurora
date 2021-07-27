@@ -1,7 +1,7 @@
 languageCode = "en-us"
 baseURL = "https://atdaycareaurora.com/"
 title = "Christian Daycare Aurora"
-disableKinds = ["section", "taxonomy"]
+disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 enableGitInfo = true
 enableRobotsTXT = true

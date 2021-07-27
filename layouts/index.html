@@ -32,7 +32,7 @@
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         {{ $hero := resources.Get "images/hero.jpg" }}
-        <picture class="flex h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full">
+        <picture class="flex h-56 w-full sm:h-72 md:h-96 lg:h-full">
             {{ $img := $hero.Resize "1600x webp" }}
             <source srcset="{{ $img.RelPermalink }}" type="image/webp" class="object-cover">
             {{ $img := $hero.Resize "1600x" }}
@@ -130,7 +130,7 @@
     </div>
 </div>
 
-<div class="container mx-auto px-4 py-20" id="contact">
+<div class="container mx-auto px-4 pt-20" id="contact">
     <div class="text-center pb-6">
         <h2 class="main-heading">Book a Tour</h2>
         <div class="divider mx-auto"></div>
