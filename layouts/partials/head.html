@@ -16,7 +16,7 @@
     {{ $options := dict "noMap" true }}
     {{ $styles := resources.Get "styles/app.css" }}
     {{ $styles = $styles | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
-    <style>{{ $styles.Content | safeCSS }}</style>
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 
     {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "GOOGLE_MAPS_API_KEY") "HEAD" (getenv "HEAD") }}
     {{ $options := dict "minify" true "sourceMap" "inline" "params" $params }}
