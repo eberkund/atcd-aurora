@@ -91,8 +91,48 @@
     </div>
 </div>
 
-{{ partial "camp/pricing" . }}
 
-{{ partial "camp/form" . }}
+<div class="container mx-auto py-20" id="contact">
+    <div class="text-center pb-6">
+        <h2 class="main-heading">Book a Tour</h2>
+        <div class="divider mx-auto"></div>
+    </div>
+    <div class="grid grid-flow-row lg:grid-cols-7 gap-6">
+        <div class="text-gray-500 px-4 py-5 sm:p-6 col-span-2">
+            <h4 class="text-xl text-black font-bold mb-2">Contact Information</h4>
+            <p class="mb-4 text-justify">Give us a call, follow us on social media or get in touch with the form and we will get back to you as soon as we can.</p>
+            <div class="mb-2">
+                <a href="tel:6478121179" class="flex items-center">
+                    <div class="h-6 w-6 mr-2">
+                        {{ readFile "assets/images/icons/phone.svg" | safeHTML }}
+                    </div>
+                    <span>(647) 812-1179</span>
+                </a>
+            </div>
+            <div class="flex items-center mb-2">
+                <a href="https://www.facebook.com/atcdAurora" rel="noreferrer" target="_blank" class="flex items-center">
+                    <div class="h-6 w-6 mr-2">
+                        {{ readFile "assets/images/icons/facebook.svg" | safeHTML }}
+                    </div>
+                    atcdaurora
+                </a>
+            </div>
+            <div class="flex items-center mb-4">
+                <a href="https://www.instagram.com/angelic.treasures.aurora/" rel="noreferrer" target="_blank" class="flex items-center">
+                    <div class="h-6 w-6 mr-2">
+                        {{ readFile "assets/images/icons/instagram.svg" | safeHTML }}
+                    </div>
+                    angelic.treasures.aurora
+                </a>
+            </div>
+        </div>
+        <div class="col-span-3">
+            {{ partial "camp/form" . }}
+        </div>
+        <div class="col-span-2">
+            {{ partial "camp/pricing" . }}
+        </div>
+    </div>
+</div>
 
 {{ end }}
