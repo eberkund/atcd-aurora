@@ -1,11 +1,14 @@
-- icon: images/values/growth.png
+- icon: assets/images/values/football.svg
   title: Outdoor Play
+  classes: bg-pink-100 text-pink-700
   text:
 
-- icon: images/values/academic.png
+- icon: assets/images/values/make-friends.svg
   title: Friendship
+  classes: bg-green-100 text-green-700
   text:
 
-- icon: images/values/confidence.png
+- icon: assets/images/values/painting.svg
   title: Creative Activities
+  classes: bg-blue-100 text-blue-700
   text:

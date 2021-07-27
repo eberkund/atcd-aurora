@@ -41,7 +41,13 @@
         </div>
         <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ range $.Site.Data.camp.expect }}
-            {{ partial "values.html" . }}
+            <div class="rounded-md p-8 shadow text-center h-full flex flex-col justify-between">
+                <div class="w-28 rounded-lg {{ .classes }} fill-current p-5 mx-auto mb-5">
+                    {{ readFile .icon | safeHTML }}
+                </div>
+                <h3 class="text-xl font-bold mb-2">{{ htmlUnescape .title }}</h3>
+                <p class="text-gray-500">{{ htmlUnescape .text }}</p>
+            </div>
             {{ end }}
         </div>
     </div>
@@ -54,7 +60,7 @@
     </div>
     <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
         {{ range $.Site.Data.staff }}
-        {{ partial "staff.html" . }}
+        {{ partial "staff" . }}
         {{ end }}
     </div>
 </div>
@@ -66,20 +72,20 @@
             <div class="divider mx-auto"></div>
         </div>
         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-            {{ partial "camp/itenerary2.html" . }}
+            {{ partial "camp/itenerary2" . }}
         </div>
         <div class="text-center pb-6 mt-20">
             <h2 class="main-heading">Meal Plan</h2>
             <div class="divider mx-auto"></div>
         </div>
         <div class="shadow overflow-x-auto border-b border-gray-200 sm:rounded-lg">
-            {{ partial "camp/menu.html" . }}
+            {{ partial "camp/menu" . }}
         </div>
     </div>
 </div>
 
-{{ partial "camp/pricing.html" . }}
+{{ partial "camp/pricing" . }}
 
-{{ partial "camp/form.html" . }}
+{{ partial "camp/form" . }}
 
 {{ end }}
