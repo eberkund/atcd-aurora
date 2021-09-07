@@ -1,8 +1,8 @@
 <div class="shadow rounded-lg overflow-hidden">
     <picture>
-        {{ $img := .Resize "600x webp" }}
+        {{ $img := .Resize "600x400 webp" }}
         <source srcset="{{ $img.RelPermalink }}" type="image/webp">
-        {{ $img := .Resize "600x" }}
-        <img src="{{ $img.RelPermalink }}" loading="lazy" draggable="false">
+        {{ $img := .Resize "600x400" }}
+        <img src="{{ $img.RelPermalink }}" width="600" height="400" loading="lazy" draggable="false">
     </picture>
 </div>
