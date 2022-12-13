@@ -32,11 +32,11 @@
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         {{ $hero := resources.Get "images/hero.jpg" }}
-        <picture class="flex h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full">
-            {{ $img := $hero.Resize "x1600 webp" }}
+        <picture class="flex h-56 w-full sm:h-72 md:h-96 lg:h-full">
+            {{ $img := $hero.Resize "1600x webp" }}
             <source srcset="{{ $img.RelPermalink }}" type="image/webp" class="object-cover">
-            {{ $img := $hero.Resize "x1600" }}
-            <img src="{{ $img.RelPermalink }}" alt="" class="object-cover block w-full">
+            {{ $img := $hero.Resize "1600x" }}
+            <img src="{{ $img.RelPermalink }}" alt="Picture of baby" class="object-cover block w-full">
         </picture>
     </div>
 </div>
@@ -69,22 +69,22 @@
     </div>
 </div> -->
 
-<div class="container mx-auto">
-    <div class="grid lg:grid-cols-3">
+<div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-3 gap-6 pb-20">
         <div>
-            {{ $img := resources.Get "images/untitled-280.jpg" }}
-            {{ $img = $img.Resize "x600 webp" }}
-            <img src="{{ $img.RelPermalink }}" alt="" class="rounded-lg shadow transform scale-90 rotate-6 translate-y-14">
-
-            {{ $img := resources.Get "images/untitled-606.jpg" }}
-            {{ $img = $img.Resize "x600 webp" }}
-            <img src="{{ $img.RelPermalink }}" alt="" class="rounded-lg shadow transform scale-75 -rotate-6 translate-x-2 -translate-y-14">
+            {{ $img := resources.Get "images/about.png" }}
+            <picture>
+                {{ $img := $img.Resize "x800 webp" }}
+                <source srcset="{{ $img.RelPermalink }}" type="image/webp" class="object-cover">
+                {{ $img := $img.Resize "x800" }}
+                <img src="{{ $img.RelPermalink }}" class="object-cover block w-full">
+            </picture>
         </div>
-        <div class="col-span-2 ml-10">
+        <div class="lg:col-span-2">
             <div class="h-full flex flex-col align-middle justify-center">
-                <h2 class="main-heading">About Angelic Treasures Child Care</h2>
+                <h2 class="main-heading">About Us</h2>
                 <div class="divider"></div>
-                <p class="text-gray-600 mb-2">Angelic Treasures Child Care is where quality child care and education meets family values. From French offerings to age-appropriate activities, we offer an array of programs focused on your child’s social, cognitive, emotional, psychological, and physical development. Plus, we provide an unparalleled home-away-from-home environment to ensure your child has an enjoyable and comfortable learning experience.</p>
+                <p class="text-gray-600 mb-2">Angelic Treasures Childcare is where quality and education meet family values. From French offerings to age-appropriate activities, we offer an array of programs focused on your child's social, cognitive, emotional, psychological, and physical development. Plus, we provide an unparalleled home-away-from-home environment to ensure your child has an enjoyable and comfortable learning experience.</p>
                 <p class="text-gray-600">We love your angels as much as you do, so it’s no wonder we’re the best at what we do.</p>
             </div>
         </div>
@@ -113,8 +113,8 @@
             <div class="divider mx-auto"></div>
         </div>
         <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {{ range $.Site.Data.icons }}
-            {{ partial "icon.html" . }}
+            {{ range $.Site.Data.values }}
+            {{ partial "values.html" . }}
             {{ end }}
         </div>
     </div>
@@ -139,13 +139,7 @@
         <h2 class="main-heading" id="faq">Frequently Asked Questions</h2>
         <div class="divider mx-auto"></div>
     </div>
-    <div class="bg-white mx-auto border border-gray-200 rounded-lg shadow-sm" x-data="{ selected:null }">
-        <ul>
-            {{ range $i, $item := $.Site.Data.faq }}
-            {{ partial "faq.html" (dict "i" $i "item" $item) }}
-            {{ end }}
-        </ul>
-    </div>
+    {{ partial "faq.html" . }}
 </div>
 
 <div class="bg-gradient py-20" id="staff">
@@ -154,7 +148,7 @@
             <h2 class="main-heading">Our Talented Team</h2>
             <div class="divider mx-auto"></div>
         </div>
-        <div class="grid grid-flow-row lg:grid-cols-3 gap-6">
+        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ range $.Site.Data.staff }}
             {{ partial "staff.html" . }}
             {{ end }}

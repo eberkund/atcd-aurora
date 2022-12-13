@@ -4,3 +4,7 @@ node_modules/
 public/
 hugo_stats.json
 jsconfig.json
+.hugo_build.lock
+
+# Local Netlify folder
+.netlify

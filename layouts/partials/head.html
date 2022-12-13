@@ -1,21 +1,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#317EFB">
     {{ hugo.Generator }}
+    {{ template "_internal/schema.html" . }}
+    {{ template "_internal/opengraph.html" . }}
 
     <title>{{ .Title }}</title>
 
     <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://www.facebook.com">
+    <link rel="preconnect" href="https://connect.facebook.net">
 
     {{ $options := dict "noMap" true }}
     {{ $styles := resources.Get "styles/app.css" }}
     {{ $styles = $styles | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 
-    {{ $scripts := resources.Get "scripts/main.ts" }}
-    {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "GOOGLE_MAPS_API_KEY") }}
+    {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "HUGO_GOOGLE_MAPS_API_KEY") }}
     {{ $options := dict "minify" true "sourceMap" "inline" "params" $params }}
+    {{ $scripts := resources.Get "scripts/main.ts" }}
     {{ $js := $scripts | js.Build $options | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" async></script>
 </head>

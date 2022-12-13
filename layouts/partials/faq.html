@@ -1,17 +1,24 @@
-<li class="relative border-b border-gray-200">
-    <button type="button" class="w-full px-8 py-6 text-left focus:outline-none" @click="selected !== {{ .i }} ? selected = {{ .i }} : selected = null">
-        <div class="flex items-center justify-between">
-            <span class="text-pink-500 text-lg font-bold">{{ .item.question }}</span>
-            <span :class="{ 'transform rotate-180': selected == {{ .i }} }" class="h-5 w-5">
-                {{ readFile "assets/images/chevron.svg" | safeHTML }}
-            </span>
-        </div>
-    </button>
-    <div class="relative overflow-hidden transition-all max-h-0 duration-500"
-         x-ref="container{{ .i }}"
-         :style="selected == {{ .i }} ? 'max-height: ' + $refs.container{{ .i }}.scrollHeight + 'px' : ''">
-        <div class="px-8 pb-6 prose max-w-none">
-            <p>{{ markdownify .item.answer }}</p>
-        </div>
-    </div>
-</li>
+<div class="bg-white mx-auto border border-gray-200 rounded-lg shadow-sm" x-data="{ selected:null }">
+    <ul>
+        {{ range $i, $item := $.Site.Data.faq }}
+        <li class="relative border-b border-gray-200">
+            <button class="w-full px-8 py-6 text-left focus:outline-none"
+                    @click="selected !== {{ $i }} ? selected = {{ $i }} : selected = null">
+                <div class="flex items-center justify-between">
+                    <span class="text-pink-500 text-lg font-bold">{{ $item.question }}</span>
+                    <span :class="{ 'rotate-180': selected == {{ $i }} }" class="h-5 w-5 transform transition-transform">
+                        {{ readFile "assets/images/icons/chevron.svg" | safeHTML }}
+                    </span>
+                </div>
+            </button>
+            <div class="relative overflow-hidden transition-all max-h-0 duration-500"
+                 x-ref="container{{ $i }}"
+                 :style="selected == {{ $i }} ? 'max-height: ' + $refs.container{{ $i }}.scrollHeight + 'px' : ''">
+                <div class="px-8 pb-6 prose max-w-none">
+                    <p>{{ markdownify $item.answer }}</p>
+                </div>
+            </div>
+        </li>
+        {{ end }}
+    </ul>
+</div>

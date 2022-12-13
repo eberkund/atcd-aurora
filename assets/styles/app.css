@@ -26,3 +26,21 @@
 .two-col li {
     list-style-postion: inside;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.card {
+    @apply overflow-hidden rounded-lg shadow bg-white;
+}
+
+th, td {
+    @apply p-2;
+}

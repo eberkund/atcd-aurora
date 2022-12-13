@@ -1,14 +1,79 @@
-- bio:
+# - name: Sharon Yang
+#   position: Director
+#   photo: "images/staff/sharon.jpg"
+#   bio: >-
+#     ...
+
+# - name: Erik Berkun-Drevnig
+#   position: Director
+#   photo: "images/staff/erik.jpg"
+#   bio: >-
+#     ...
+
+# - name: Aaron Chen
+#   position: Director
+#   photo: "images/staff/aaron.jpg"
+#   bio: >-
+#     ...
+
+- name: Vicky Dimitropoulos
   position: Supervisor
-  name: Vicky Dimitropoulos
-  photo: "images/staff/unknown.jpg"
+  photo: "images/staff/vicky.jpg"
+  bio: >-
+    I am a wife and mother of two beautiful children. I graduated from Seneca
+    College in 1998 with Honors, where I obtained my Diploma of Early Childhood
+    Education. I decided to become an educator because I wanted to help shape
+    and form the children of tomorrow. As the supervisor of this center, I look
+    forward to working with the staff and families to create a welcoming
+    environment for the children.
+
+# - name: Jahnae Heart
+#   position: RECE
+#   photo: images/staff/jahnae.jpg
+#   bio: >-
+#     I am a graduate of the ECE program at Centennial College. Over the years I
+#     have had the privilege of working with infants, toddlers, preschoolers and
+#     school agers. I have many hobbies, one of them includes taking care of my
+#     little sisters. I have always had a love for children and I wish to become a
+#     kindergarten teacher one day.  I look forward to meeting each and everyone
+#     of you.
 
 # - bio: >-
 #     I am a wife and mother of two boys. I graduated from Seneca College in 2015
 #     where I obtained my Diploma in Early Childhood Education. I have over 10 years of
 #     experience working with children up to age 12 and loved every moment of it. I
-#     decided to become an educator because I believe that children are our future and 
+#     decided to become an educator because I believe that children are our future and
 #     it's out duty to raise our children to lead healthy, successful and independent lives.
 #   position: Lead ECE
 #   name: Laura Castillo
 #   photo: "images/staff/laura.jpg"
+
+- name: Camila Pessoa
+  position: RECE
+  photo: images/staff/camila.jpg
+  bio: >-
+    I was born and raised in Brazil and I immigrated to Canada in 2017 to study
+    at George Brown College. As a parent of three children, I recognize the
+    importance and benefits of early education and learning through play.
+
+    I love working with children and being part of their development and
+    learning process. Knowing that I can positively impact a child's development
+    is an honor. I am so excited to join and work with the Angelic Treasures
+    team, children and families.
+
+- name: Marshanna Campbell
+  position: RECE
+  photo: images/staff/marshanna.jpg
+  bio: >-
+    My name is Marshanna and I am an RECE in the infant room. I attended Humber
+    College were I received both my Early Childhood Education and Personal
+    Support Worker diploma. I have worked with toddlers, pre-schoolers, school
+    age and JK/SK. I look forward to meeting each and every one of you.
+
+# - name: Paul Berkun-Drevnig
+#   position: Handyman
+#   photo: images/staff/paul.jpg
+#   bio: >-
+#     I am currently studying architecture and urban planning. I am very friendly
+#     and love to talk. When I am not causing Aaron's hair to go gray you may spot
+#     me painting baseboards or patching drywall.
