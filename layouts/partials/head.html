@@ -18,7 +18,7 @@
     {{ $styles = $styles | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 
-    {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "GOOGLE_MAPS_API_KEY") "HEAD" (getenv "HEAD") }}
+    {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "HUGO_GOOGLE_MAPS_API_KEY") }}
     {{ $options := dict "minify" true "sourceMap" "inline" "params" $params }}
     {{ $scripts := resources.Get "scripts/main.ts" }}
     {{ $js := $scripts | js.Build $options | minify | fingerprint }}
