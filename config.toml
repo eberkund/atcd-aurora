@@ -1,6 +1,6 @@
 languageCode = "en-us"
-baseURL = "https://atdaycareaurora.com/"
-title = "Christian Daycare Aurora"
+baseURL = "https://firstsmilesdaycare.com/"
+title = "First Smiles Daycare"
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 enableGitInfo = true
@@ -10,6 +10,6 @@ enableRobotsTXT = true
   writeStats = true
 
 [params]
-  description = "Angelic Treasures focuses on the development of children. Activities are planned on a daily basis to help improve motor development, cognitive skills and overall ..."
+  description = "First Smiles focuses on the development of children. Activities are planned on a daily basis to help improve motor development, cognitive skills and overall ..."
 #   images = ["site-feature-image.jpg"]
 #   title = "My cool site"
