@@ -18,15 +18,11 @@
     Vulnerable Sector Screenings and current CPR and First Aid certificates. We
     encourage you to visit the centre for a tour and meet them yourself.
 
-# - question: Are you a subsidized daycare?
-#   answer:
-#     We are currently unable to offer subsidies, we will be offering subdidy in
-#     2022.
+- question: Are you a subsidized daycare?
+  answer: Yes, please contact us for more information about our fees.
 
-- question: Is there a discount for siblings?
-  answer:
-    Yes, we offer a discount for the eldest sibling. Please contact us for more
-    information.
+- question: Are you participating in CWELCC?
+  answer: Yes, please contact us for more inforamtion about our fees.
 
 - question: What meals do you provide?
   answer:
@@ -56,13 +52,3 @@
 
 - question: What payment methods do you accept?
   answer: We accept preauthorized bank withdrawal made every two weeks.
-
-- question: How are you handling COVID-19?
-  answer:
-    We're committed to protecting the health and safety of all of our children,
-    staff and families during the COVID-19 pandemic. To ensure everyone's
-    well-being, we are going above and beyond to follow all health and safety
-    protocols as outlined by the Ministry of Education and Public Health as well
-    as introducing our new reopening guidelines. If you have any questions or
-    concerns, please feel free to reach out. We look forward to seeing you and
-    your family.
