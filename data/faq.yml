@@ -1,54 +1,53 @@
-- question: Do we have to be Christian to attend?
-  answer:
-    No, we are Christian but you do not have to be. In fact, the families in our
-    centres are from all backgrounds and all religions. We teach Bible stories
-    and values rooted in Christianity such as love, forgiveness, honesty,
-    charity, gentleness and kindness. Parents are asked to sign a statement of
-    faith to acknowledge that we will be teaching said curriculum.
+# - question: Do we have to be Christian to attend?
+#   answer:
+#     No, we are Christian but you do not have to be. In fact, the families in our
+#     centres are from all backgrounds and all religions. We teach Bible stories
+#     and values rooted in Christianity such as love, forgiveness, honesty,
+#     charity, gentleness and kindness. Parents are asked to sign a statement of
+#     faith to acknowledge that we will be teaching said curriculum.
 
-- question: Are you licensed by the Ministry of Education?
-  answer:
-    Yes, we are licensed by the Ministry of Education. We undergo frequent
-    inspections from our designated program advisor.
+# - question: Are you licensed by the Ministry of Education?
+#   answer:
+#     Yes, we are licensed by the Ministry of Education. We undergo frequent
+#     inspections from our designated program advisor.
 
-- question: Are your staff qualified?
-  answer:
-    All our staff are registered with the College of Early Childhood Educators
-    and have a diploma in early childhood education. Our staff has their
-    Vulnerable Sector Screenings and current CPR and First Aid certificates. We
-    encourage you to visit the centre for a tour and meet them yourself.
+# - question: Are your staff qualified?
+#   answer:
+#     All our staff are registered with the College of Early Childhood Educators
+#     and have a diploma in early childhood education. Our staff has their
+#     Vulnerable Sector Screenings and current CPR and First Aid certificates. We
+#     encourage you to visit the centre for a tour and meet them yourself.
 
 - question: Are you a subsidized daycare?
   answer: Yes, please contact us for more information about our fees.
 
 - question: Are you participating in CWELCC?
   answer: Yes, please contact us for more inforamtion about our fees.
+# - question: What meals do you provide?
+#   answer:
+#     We offer morning breakfast, hot lunch, afternoon snacks and fruit at 5PM. We
+#     only serve water and milk to drink and we make all necessary dietary
+#     accommodations for our children with allergies. The menu is based on the
+#     Canada Food Guide with the assistance of a nutritionist. Our chefs have
+#     their food handling certificates and great palettes.
 
-- question: What meals do you provide?
-  answer:
-    We offer morning breakfast, hot lunch, afternoon snacks and fruit at 5PM. We
-    only serve water and milk to drink and we make all necessary dietary
-    accommodations for our children with allergies. The menu is based on the
-    Canada Food Guide with the assistance of a nutritionist. Our chefs have
-    their food handling certificates and great palettes.
+# - question: Do you accommodate children with special needs?
+#   answer:
+#     We accept children of all abilities and learning needs. We believe in
+#     complete inclusion and integration. Please contact us with your child's
+#     differing abilities and we will work with you to make it happen. We
+#     collaborate with healthcare professionals (occupational therapists,
+#     physiotherapists, doctors, etc.) and do everything we can to give our meet
+#     your children's needs.
 
-- question: Do you accommodate children with special needs?
-  answer:
-    We accept children of all abilities and learning needs. We believe in
-    complete inclusion and integration. Please contact us with your child's
-    differing abilities and we will work with you to make it happen. We
-    collaborate with healthcare professionals (occupational therapists,
-    physiotherapists, doctors, etc.) and do everything we can to give our meet
-    your children's needs.
+# - question: How do your centres differ from the rest?
+#   answer:
+#     We offer a Christian curriculum and enrichment programs for children of all
+#     ages including French. Our programs are inclusive, targeted and holistic. We
+#     foster all areas of development including social, emotional, physical and
+#     mental. Our environment focuses on child-led learning and adheres to the
+#     pillars of _How Does Learning Happen_ and _Early Learning for Every Child
+#     Today (ELECT)_.
 
-- question: How do your centres differ from the rest?
-  answer:
-    We offer a Christian curriculum and enrichment programs for children of all
-    ages including French. Our programs are inclusive, targeted and holistic. We
-    foster all areas of development including social, emotional, physical and
-    mental. Our environment focuses on child-led learning and adheres to the
-    pillars of _How Does Learning Happen_ and _Early Learning for Every Child
-    Today (ELECT)_.
-
-- question: What payment methods do you accept?
-  answer: We accept preauthorized bank withdrawal made every two weeks.
+# - question: What payment methods do you accept?
+#   answer: We accept preauthorized bank withdrawal made every two weeks.
