@@ -1,57 +1,48 @@
 - name: Infant
   age_range: Ages 1 &ndash; 18 months
   description:
-    Our infant program provides for the individual needs of the child. We
-    incorporate programming that allows for staff to encourages independence and
-    present fundamental foundations for this Ages group.
+    In our infant program (1:3 ratio) children partake in indoor and outdoor
+    exploration, songs, story telling and developing their fine motor skills
+    through creative and sensory play.
   image: images/programs/infant.jpg
 
 - name: Toddler
   age_range: Ages 18 months &ndash; 2½ years
   description:
-    Our busy toddlers enjoy learning to become part of group who want the same
-    things at the same time. Developmentally they begin to stay on task longer
-    and are able to do some simple puzzles to complex. They enjoy the suspense
-    of a good story and participate during music circle.
+    Our busy toddlers (1:5 ratio) follow a flexible schedule filled with
+    activities designed to foster new experiences. They will explore music,
+    movement, puzzles, blocks and learning to play with others.
   image: images/programs/toddler.jpg
 
 - name: Preschool
   age_range: Ages 2&half; &ndash; 4 years
   description:
-    During our daily preschool program we incorporate activities such as large
-    group, cognitive, fine and gross motor, sensory, languages and dramatic play
-    to encourAges growth and development.
+    In our preschool rooms (1:8 ratio), students participate in large group
+    activies, and continue developing their fine and gross motor skills through
+    a variety of exciting activies like dramatic play, French language classes
+    and problem solving games.
   image: images/programs/preschool.jpg
 
-- name: Private Kindergarten
-  age_range: Ages 4 &ndash; 5 years
-  description:
-    This is an academic grade and children are expected to achieve levels of
-    competencies before leaving for the next grade. There is an opportunity for
-    parents to meet the teachers at parent night and also at curriculum night.
-  image: images/programs/kindergarten.jpg
+# - name: Private Kindergarten
+#   age_range: Ages 4 &ndash; 5 years
+#   description:
+#     This is an academic grade and children are expected to achieve levels of
+#     competencies before leaving for the next grade. There is an opportunity for
+#     parents to meet the teachers at parent night and also at curriculum night.
+#   image: images/programs/kindergarten.jpg
 
-- name: Summer Camp
-  age_range: Ages 6 &ndash; 12 years
-  description:
-    French, sports, math, arts & crafts, science experiments and a host of other
-    activities that will enlighten and delight your child. Our ratios are low
-    and our staff is top notch.
-  image: images/programs/classes.jpg
+# - name: Summer Camp
+#   age_range: Ages 6 &ndash; 12 years
+#   description:
+#     French, sports, math, arts & crafts, science experiments and a host of other
+#     activities that will enlighten and delight your child. Our ratios are low
+#     and our staff is top notch.
+#   image: images/programs/classes.jpg
 
 - name: Before & After
   age_range: Ages 4 &ndash; 12 years
   description:
-    Our program is dedicated to the development of children in school with
-    age-appropriate, educational and stimulating activities that develop their
-    skills to further their growth in all areas such as math, science, literacy
-    and creativity.
+    Our program is dedicated to providing a constructive environment for the
+    chilren of parents who need additional care. Our talented team ensures that
+    engaging and age appropriate activities are provided.
   image: images/programs/before-after.jpg
-# - name: Classes
-#   description:
-#     First Smiles focuses on the development of children. Activities are
-#     planned on a daily basis to help improve motor development, cognitive skills
-#     and overall learning. Specific activities are designed to help each child
-#     progress through age appropriate milestones.
-#   image: images/programs/classes.jpg
-
