@@ -13,3 +13,7 @@ enableRobotsTXT = true
   description = "First Smiles focuses on the development of children. Activities are planned on a daily basis to help improve motor development, cognitive skills and overall ..."
 #   images = ["site-feature-image.jpg"]
 #   title = "My cool site"
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-VTMTC799BH'

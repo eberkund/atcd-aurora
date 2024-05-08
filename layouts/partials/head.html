@@ -22,4 +22,6 @@
     {{ $scripts := resources.Get "scripts/main.ts" }}
     {{ $js := $scripts | js.Build $options | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" async></script>
+    
+    {{ template "_internal/google_analytics.html" . }}
 </head>
