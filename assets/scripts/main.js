@@ -3,4 +3,6 @@ import "scripts/pixel";
 import Datepicker from "flowbite-datepicker/Datepicker";
 
 const datepickerEl = document.querySelector("[datepicker]");
-new Datepicker(datepickerEl, {});
+new Datepicker(datepickerEl, {
+    autohide: true,
+});
