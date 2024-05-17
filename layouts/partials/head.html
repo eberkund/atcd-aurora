@@ -19,7 +19,7 @@
 
     {{ $params := dict "GOOGLE_MAPS_API_KEY" (getenv "HUGO_GOOGLE_MAPS_API_KEY") }}
     {{ $options := dict "minify" true "sourceMap" "inline" "params" $params }}
-    {{ $scripts := resources.Get "scripts/main.ts" }}
+    {{ $scripts := resources.Get "scripts/main.js" }}
     {{ $js := $scripts | js.Build $options | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" async></script>
     

@@ -1,7 +1,13 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     purge: {
+        // enabled: false,
         enabled: process.env.HUGO_ENVIRONMENT === "production",
-        content: ["./hugo_stats.json", "./layouts/**/*.html"],
+        content: [
+            "./hugo_stats.json",
+            "./layouts/**/*.html",
+            "./node_modules/flowbite-datepicker/dist/js/datepicker.js",
+        ],
         extractors: [
             {
                 extractor: (content) => {
@@ -11,9 +17,7 @@ module.exports = {
                 extensions: ["json"],
             },
         ],
-        mode: "all",
     },
-    darkMode: false,
     theme: {
         extend: {
             typography: {},
@@ -24,5 +28,6 @@ module.exports = {
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
         require("@tailwindcss/aspect-ratio"),
+        require("flowbite/plugin"),
     ],
 };

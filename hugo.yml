@@ -1,0 +1,19 @@
+languageCode: en-us
+baseURL: https://firstsmilesdaycare.com/
+title: First Smiles Daycare
+disableKinds:
+  - taxonomy
+ignoreErrors:
+  - error-disable-taxonomy
+enableGitInfo: true
+enableRobotsTXT: true
+build:
+  writeStats: true
+params:
+  description:
+    First Smiles focuses on the development of children. Activities are planned
+    on a daily basis to help improve motor development, cognitive skills and
+    overall development.
+services:
+  googleAnalytics:
+    ID: G-VTMTC799BH
