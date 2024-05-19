@@ -3,11 +3,7 @@ module.exports = {
     purge: {
         // enabled: false,
         enabled: process.env.HUGO_ENVIRONMENT === "production",
-        content: [
-            "./hugo_stats.json",
-            "./layouts/**/*.html",
-            "./node_modules/flowbite-datepicker/dist/js/datepicker.js",
-        ],
+        content: ["./hugo_stats.json", "./layouts/**/*.html"],
         extractors: [
             {
                 extractor: (content) => {
@@ -28,6 +24,5 @@ module.exports = {
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
         require("@tailwindcss/aspect-ratio"),
-        require("flowbite/plugin"),
     ],
 };
