@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body {
+  touch-action: pan-x pan-y;
+}
+
 .bg-gradient {
     background: linear-gradient(#d7eaff, #ffe1ef);
 }
