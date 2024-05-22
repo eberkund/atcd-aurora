@@ -15,7 +15,7 @@ body {
 }
 
 .divider {
-    @apply bg-coral-500 pt-1 mt-2 mb-4 w-20;
+    @apply bg-keppel-500 pt-1 mt-2 mb-4 w-20;
 }
 
 .two-col {
