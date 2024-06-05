@@ -39,10 +39,10 @@
 #     and our staff is top notch.
 #   image: images/programs/classes.jpg
 
-- name: Before & After
-  age_range: Ages 4 &ndash; 12 years
-  description:
-    Our program is dedicated to providing a constructive environment for the
-    chilren of parents who need additional care. Our talented team ensures that
-    engaging and age appropriate activities are provided.
-  image: images/programs/before-after.jpg
+# - name: Before & After
+#   age_range: Ages 4 &ndash; 12 years
+#   description:
+#     Our program is dedicated to providing a constructive environment for the
+#     chilren of parents who need additional care. Our talented team ensures that
+#     engaging and age appropriate activities are provided.
+#   image: images/programs/before-after.jpg
