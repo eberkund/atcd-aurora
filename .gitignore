@@ -5,6 +5,7 @@ public/
 hugo_stats.json
 jsconfig.json
 .hugo_build.lock
+.envrc
 
 # Local Netlify folder
 .netlify

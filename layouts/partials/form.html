@@ -13,10 +13,21 @@
                 <label for="phone" class="block text-xs mb-1 font-medium text-gray-500 uppercase">Phone Number</label>
                 <input type="tel" name="phone" id="phone" autocomplete="tel" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm sm:leading-6 border-gray-300 rounded-md" required>
             </div>
-            <div>
-                <label for="dob" class="block text-xs mb-1 font-medium text-gray-500 uppercase">Child Date of Birth</label>
+            <div class="mb-3">
+                <label for="dob" class="block text-xs mb-1 font-medium text-gray-500 uppercase">Child Birth Date</label>
                 <div class="flex rounded-md shadow-sm">
                     <input type="date" name="dob" id="dob" class="block w-full rounded-none rounded-l-md border-gray-300 focus:ring-indigo-500 sm:text-sm sm:leading-6 focus:z-10">
+                    <button type="button" class="relative -ml-px inline-flex items-center gap-x-1.5 rounded-l-none rounded-r-md border border-gray-300 focus:outline-none focus:ring-1 focus:border-indigo-500 focus:ring-indigo-500 px-3 py-2 hover:bg-gray-50 focus:z-10" onclick="this.previousElementSibling.showPicker();">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <label for="start" class="block text-xs mb-1 font-medium text-gray-500 uppercase">Desired Start Date</label>
+                <div class="flex rounded-md shadow-sm">
+                    <input type="date" name="start" id="start" class="block w-full rounded-none rounded-l-md border-gray-300 focus:ring-indigo-500 sm:text-sm sm:leading-6 focus:z-10">
                     <button type="button" class="relative -ml-px inline-flex items-center gap-x-1.5 rounded-l-none rounded-r-md border border-gray-300 focus:outline-none focus:ring-1 focus:border-indigo-500 focus:ring-indigo-500 px-3 py-2 hover:bg-gray-50 focus:z-10" onclick="this.previousElementSibling.showPicker();">
                         <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />

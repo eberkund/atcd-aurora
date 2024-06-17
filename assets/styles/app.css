@@ -6,6 +6,11 @@ body {
   touch-action: pan-x pan-y;
 }
 
+label:has(+ input:required):after {
+  content: ' *';
+  @apply font-serif text-lg leading-4;
+}
+
 .bg-gradient {
     background: linear-gradient(#d7eaff, #ffe1ef);
 }
